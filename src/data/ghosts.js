@@ -1,4 +1,4 @@
-[
+export const ghosts = [
   {
     name: 'Demon',
     evidence: {
