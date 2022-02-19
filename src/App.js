@@ -1,11 +1,11 @@
 import './App.scss';
-import { ghosts } from './data/ghosts';
+import GhostItems from './components/GhostItems';
 
 function App() {
   return (
-    <>
-      <div>{ghosts[0].name}</div>
-    </>
+    <div id="app">
+      <GhostItems />
+    </div>
   );
 }
 
