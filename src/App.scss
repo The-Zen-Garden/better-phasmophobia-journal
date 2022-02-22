@@ -281,6 +281,7 @@ p {
       & > .weakness,
       & > .abilities {
         padding: 0 20px;
+        white-space: pre-wrap;
       }
     }
     & > .behavior,
@@ -291,6 +292,7 @@ p {
       background-color: #212121;
       padding: 0 20px 5px;
       margin-top: 20px;
+      white-space: pre-wrap;
     }
   }
 }
