@@ -72,7 +72,7 @@ export const ghosts = [
     strength: 'Lower temperatures allow the Hantu to move at faster speeds.',
     weakness: 'Hantus move slower in warmer areas.',
     abilities:
-      'Moves much quicker in colder areas during hunts. They Emit frosty breath in freezing rooms.',
+      'Moves much quicker in colder areas during hunts. Emits frosty breath in freezing rooms.',
     behavior:
       "During a hunt, a Hantu's speed is affected by the temperature of the rooms that it goes through. This means that the Hantu is highly dependent on the map's breaker state, as the presence of power keeps the investigation area warm and thus slows the Hantu down.\r\n\r\nThe Hantu is twice as likely to choose turning off the breaker as an interaction, compared to other ghosts.\r\n\r\nWhen the Hantu manifests itself during a hunt, it will emit freezing breath when it is in a room with a temperature equal to or lower than 3°C (37.4°F). Dead players cannot see this breath.\r\n\r\nUnlike all other ghosts, the Hantu does not accelerate while maintaining line of sight during hunts.",
     strategies:
@@ -126,7 +126,7 @@ export const ghosts = [
       'Focuses on the same player until that player is killed or has left the game.',
     weakness: 'Makes unique paranormal sounds on a parabolic microphone.',
     abilities:
-      'Will only chase a single target unless that target is outside the location during a hunt. Unique shriek-like paranormal sound emitted from Parabolic Microphone.',
+      'Unique shriek-like paranormal sound emitted from Parabolic Microphone.',
     behavior:
       "At the start of the game, a Banshee will randomly select a primary target. If the primary target dies or leaves the game, a new primary target will be selected.\r\n\r\nA Banshee will only check for their primary target's sanity when trying to initiate a hunt. When a Banshee hunts, it will mostly follow standard hunt rules, but it will ignore all players other than its target, unlike other ghosts, which generally chase any opportune player. It will not attempt to chase other players and will not kill them, even if it comes into contact with a non-target player. The Banshee will react to Smudge Sticks lit by other players, but this will not allow for completion of the \"Repel a ghost while it is chasing someone\" optional objective, unless the Banshee is also chasing its target when it is lit.\r\n\r\nIf a Banshee begins a hunt while its primary target is outside the building, the Banshee will temporarily select another target for that hunt, returning to its primary target once the hunt ends.\r\n\r\nThe Banshee also has a mechanic similar to the Phantom's, where it is more likely to roam to the location of its chosen target outside of a hunt.\r\n\r\nA Banshee will prefer to cause ghost events where it sings over other types of ghost events. When it performs a singing event near its target, they will have an additional 5% sanity drop on top of the standard sanity drain.\r\n\r\nOther than the effects stated above, being the Banshee's target does not appear to affect other mechanics such as the rate of interactions.\r\n\r\nWhen a Parabolic Microphone is used, the Banshee has a chance of making a unique shriek-like paranormal sound different from other ghosts.",
     strategies:
@@ -286,7 +286,7 @@ export const ghosts = [
     abilities:
       'No footprints after stepping on a salt pile. Teleports to players randomly.',
     behavior:
-      "When the Wraith is not hunting, it has a chance to teleport within 3 meters of a random player, generating an EMF Level 2 reading, with a 25% chance for this to be an EMF Level 5 reading instead. Wraiths cannot teleport during hunts, but may teleport just before initiating one.\r\n\r\nWhen a Wraith steps in a salt pile, indicated by the presence of an imprint, it will never leave any UV-visible footprints, even if it moves and makes footstep noises. It will also temporarily have an increased amount of ghost activity.\r\n\r\nWraiths cannot and do not:\r\n\r\nAttempt to avoid salt piles, even during hunts\r\nFail to leave imprints in salt; they will always do so if they step in it\r\nFloat off the ground, whether during hunts or manifestations. You cannot identify a Wraith just by looking at its ghost model\r\nSee through physical objects such as walls and doors, despite the Journal's description of the Wraith suggesting otherwise\r\nWalk quietly; Wraiths will emit footstep noises at the same volume as most other ghosts\r\nWalk through walls, even during hunts; they can only walk through doors (which all other ghosts are also able to do).",
+      "When the Wraith is not hunting, it has a chance to teleport within 3 meters of a random player, generating an EMF Level 2 reading, with a 25% chance for this to be an EMF Level 5 reading instead. Wraiths cannot teleport during hunts, but may teleport just before initiating one.\r\n\r\nWhen a Wraith steps in a salt pile, indicated by the presence of an imprint, it will never leave any UV-visible footprints, even if it moves and makes footstep noises. It will also temporarily have an increased amount of ghost activity.\r\n\r\nWraiths cannot and do not:\r\n\r\nAttempt to avoid salt piles, even during hunts.\r\nFail to leave imprints in salt; they will always do so if they step in it.\r\nFloat off the ground, whether during hunts or manifestations. You cannot identify a Wraith just by looking at its ghost model.\r\nSee through physical objects such as walls and doors, despite the Journal's description of the Wraith suggesting otherwise.\r\nWalk quietly; Wraiths will emit footstep noises at the same volume as most other ghosts.\r\nWalk through walls, even during hunts; they can only walk through doors (which all other ghosts are also able to do).",
     strategies:
       "Be on the lookout for seemingly random EMF level 2 or 5 readings; it may mean a Wraith teleported to you.\r\n\r\nA relatively accurate method for identifying a Wraith without gathering evidence is placing salt piles near it, with a UV Flashlight or glowstick ready. When the ghost passes through the salt, aim the UV light toward the ghost's footstep noises. If no footprints are visible, even under UV light, the ghost is most likely a Wraith; at the same time, visible footprints definitely rule out a Wraith. Note that any ghost can step in salt and choose not to move afterwards, generating no footprints; players should listen for multiple footstep sounds before checking for footprints.\r\n\r\nAs Wraiths leave no footprints and no fingerprints, they are notoriously difficult to get maximum photo rewards with. Try placing props around the ghost's general location for interaction photos, or utilize a Ouija Board if one spawns.",
     excluded: false,
@@ -310,7 +310,7 @@ export const ghosts = [
     strength: 'Can mimic the actions of other ghosts.',
     weakness: 'Induces Ghost Orbs as fourth evidence.',
     abilities:
-      'Unpredictable due to mirroring traits of other ghosts. This includes six-fingered handprints of the Obake.',
+      'Unpredictable. Mirrors traits of other ghosts (eg. Obake six-finger handprint.)',
     behavior:
       'The Mimic is able to mirror the traits of other ghosts, such as leaving a six-fingered handprint that would otherwise identify an Obake. The Mimic may occasionally change the ghost type that it chooses to imitate every 30 seconds to about 2 minutes.\r\n\r\nThe Mimic also provides "evidence" of Ghost Orbs in addition to its three main evidence types, which also appear on Nightmare difficulty. In effect, this is the only ghost that would appear to have four types of evidence (or three on Nightmare). The Ghost Orbs, along with the other evidences if none are hidden due to the difficulty, will always exist regardless of the type of ghost that The Mimic chooses to imitate.',
     strategies:
@@ -363,7 +363,7 @@ export const ghosts = [
       'More active when groups are nearby. Throws objects at great speeds.',
     weakness: "Easy to identify if it's more active.",
     abilities:
-      'Extremely strong and active. Often throws objects with more force but cannot throw multiple items at once.',
+      'Throws items with extreme force but cannot throw multiple at once.',
     behavior:
       "The Oni is more active, interacting with objects more often and causing more ghost events. An Oni cannot perform the smoke/mist-type ghost event that causes a hiss, but can still perform a manifestation (ghost) event and may hiss in that case. It also has a higher chance of showing in its full form during a manifestation event as opposed to a shadowy or translucent form.\r\n\r\nWhen interacting with objects, an Oni has a chance of throwing it higher and/or with more force, making it land further away. Unlike Poltergeists, they cannot throw multiple items at once, nor does interacting with items reduce the players' sanity.",
     strategies:
@@ -415,7 +415,7 @@ export const ghosts = [
     strength: 'Drains Sanity from those who look at it.',
     weakness: 'Temporarily disappears after a photo is taken of it.',
     abilities:
-      "Occasionally chooses a random player and navigates to their location, creating an EMF interaction at it's starting location.",
+      'Occasionally chooses a random player and navigates to them, leaving EMF at starting location.',
     behavior:
       "If a photo is a taken of a Phantom, it will disappear temporarily for that specific instance of it appearing. This will not affect its ability to cause a ghost event or hunt, and will not stop an ongoing hunt.\r\n\r\nPhantoms have an ability where it will occasionally choose a random player and navigate to their location, creating an Interaction EMF at its starting location.\r\n\r\nLooking at a Phantom within 10 meters of it will reduce the player's sanity by 0.4% each second, as opposed to 0.2% for other ghosts. This applies during both ghost events and hunts.\r\n\r\nDuring a hunt, a Phantom will flash visible every 1 to 2 seconds, as opposed to every 0.3 to 1 second for other ghosts, making it harder to take a photo of.",
     strategies:
@@ -494,7 +494,7 @@ export const ghosts = [
     weakness:
       'The ghost will not enter a hunt if there are multiple people nearby.',
     abilities:
-      'Rarely performs actions in the presence of multiple people. Appears as a transparent shadow when manifested by a Summoning Circle.',
+      'Appears as a transparent shadow when manifested by a Summoning Circle.',
     behavior:
       "Shades can hunt only below an average sanity of 35%, lower than most other ghosts.\r\n\r\nShades are less likely to perform interactions than most other ghosts when at least one player is in the same room as the ghost. When at least one player is in the same room as a Shade, the chance of it hunting will also be negated. This does not mean the Shade cannot hunt, however, as it can initiate a hunt in another room without the presence of players.\r\n\r\nShades are less likely to perform ghost events at high sanities. At 100% average sanity, an attempted ghost event will succeed 0% of the time. This success rate increases by 2% per percentage of average sanity lost; at an average sanity of 50%, an attempted ghost event will always succeed.\r\n\r\nWhen it performs a ghost event, Shades will prefer hissing into the player's ear instead of a full-manifestation. If it does manifest for a ghost event, it has a higher chance of not appearing fully solid.",
     strategies:
@@ -519,7 +519,7 @@ export const ghosts = [
     },
     strength: 'A Jinn will travel at a faster speed if its victim is far away.',
     weakness:
-      "Turning off the location's power source will prevent the Jinn from using its ability.",
+      "Turning off the location's power source will prevent speed boost.",
     abilities: 'Travels at faster speeds if its target is far away.',
     behavior:
       'During a hunt, when a Jinn enters the "chasing" mode by spotting a player, it will travel to them at a higher speed of 2.5 m/s, until they are within 2 metres of the player. They will then pursue the player at the standard ghost speed.\r\n\r\nThe Jinn has another ability, that when used, will lower the sanity of all players within a certain range by 25%. There is a currently unknown and very specific way to tell that this has occurred (other than checking the Sanity Monitor), concerning the Fuse Box.\r\n\r\nFor the Jinn to be able to use its abilities, the fuse box must be turned on. If the fuse box is not turned on, it cannot use either ability. Whether there are lights turned on or not does not affect this.\r\n\r\nA Jinn cannot turn off a breaker directly through interacting with it. It can still turn it off indirectly by turning on a light to exceed the limit on the number of lights that can be turned on.\r\n\r\nThere is a popular myth claiming the Jinn will interact with electronics often rather than other interactions; this is not true. A Jinn has an equal chance of interacting with anything nearby.',
@@ -546,7 +546,7 @@ export const ghosts = [
     strength: 'Has quieter footsteps during hunts.',
     weakness: 'Produces paranormal sounds more frequently.',
     abilities:
-      'Audible footsteps and electronics disruption have the same radius. Non-footstep sounds remain audible at the same distance as other ghosts.',
+      'Audible footsteps and electronics disruption have the same radius (9m).',
     behavior:
       "When not hunting, a Myling will make paranormal sounds more often than other ghosts. These can be heard through a Parabolic Microphone.\r\n\r\nWhen hunting, a Myling's footstep sounds will only be audible to players within 9 meters, similar to the distance required for electronic interference. Other hunting sounds (laugh, sing, wheeze, etc.) will remain audible at the same distance as other ghosts.",
     strategies:
