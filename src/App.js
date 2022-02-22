@@ -1,10 +1,10 @@
 import './App.scss';
-import GhostItems from './components/GhostItems';
+import Ghosts from './components/Ghosts';
 
 function App() {
   return (
     <div id="app">
-      <GhostItems />
+      <Ghosts />
     </div>
   );
 }

@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
 import { ghosts } from '../data/ghosts';
+import GhostInfo from './GhostInfo';
 
-function GhostItems() {
+function Ghosts() {
   const [ghostList, setGhostList] = useState(ghosts);
   const [counter, setCounter] = useState(0);
+  const [ghostIndex, setGhostIndex] = useState(0);
+  const [ghostInfoEnabled, setghostInfoEnabled] = useState(false);
 
   function exclude(ghost, a) {
     let ghostListUpdated = ghostList;
     let index = ghostList.findIndex((g) => g.name === ghost);
+    setGhostIndex(index);
     a
       ? (ghostListUpdated[index].excluded = true)
       : (ghostListUpdated[index].excluded = false);
     setGhostList(ghostListUpdated);
+  }
+
+  function ghostInfo(ghost, a) {
+    let index = ghostList.findIndex((g) => g.name === ghost);
+    setGhostIndex(index);
   }
 
   const ghostItems = ghostList
@@ -23,13 +32,20 @@ function GhostItems() {
     .map((ghost) => (
       <div
         key={ghost.name.toLowerCase().split(' ').join('')}
-        className={`ghost ${ghost.name.toLowerCase().split(' ').join('')} ${
-          ghost.excluded !== true ? '' : 'disabled'
+        className={`ghost ${ghost.name.toLowerCase().split(' ').join('')}${
+          ghost.excluded !== true ? '' : ' disabled'
         }`}
       >
         <h2>{ghost.name}</h2>
         <div className="actions">
-          <a href="#!" title="Ghost Info">
+          <a
+            href="#!"
+            title="Ghost Info"
+            onClick={() => {
+              ghostInfo(ghost.name);
+              setghostInfoEnabled(true);
+            }}
+          >
             <span>
               <i className="gg-info"></i>
             </span>
@@ -66,7 +82,16 @@ function GhostItems() {
       </div>
     ));
 
-  return <div id="ghosts">{ghostItems}</div>;
+  return (
+    <>
+      <div id="ghosts">{ghostItems}</div>
+      <GhostInfo
+        ghostIndex={ghostIndex}
+        ghostList={ghostList}
+        ghostInfoEnabled={ghostInfoEnabled}
+      />
+    </>
+  );
 }
 
-export default GhostItems;
+export default Ghosts;
