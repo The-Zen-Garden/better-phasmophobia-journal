@@ -3,56 +3,42 @@ import React, { Component } from 'react';
 export default class GhostInfo extends Component {
   render() {
     const parentProps = this.props;
+    const i = parentProps.ghostIndex;
+    const list = parentProps.ghostList;
+
     function backgroundClick(e) {
       e.target.className !== 'active' || parentProps.ghostInfoChange(false);
     }
+
     return (
       <div
         id="ghost_info"
-        className={this.props.ghostInfoEnabled === true ? 'active' : ''}
+        className={!parentProps.ghostInfoEnabled || 'active'}
         onClick={(e) => backgroundClick(e)}
       >
         <div className="info_block" ref={this.infoRef}>
           <div className="header">
             <h2>
               <i className="gg-info"></i>
-              {this.props.ghostList[this.props.ghostIndex].name}
+              {list[i].name}
               <div className="evidence">
-                {Object.entries(
-                  this.props.ghostList[this.props.ghostIndex].evidence
-                ).map(([key]) => {
+                {Object.entries(list[i].evidence).map(([key]) => {
                   return (
                     <a
-                      key={this.props.ghostList[this.props.ghostIndex].evidence[
-                        key
-                      ].name
+                      key={list[i].evidence[key].name
                         .toLowerCase()
                         .split(' ')
                         .join('')}
-                      className={this.props.ghostList[
-                        this.props.ghostIndex
-                      ].evidence[key].name
+                      className={list[i].evidence[key].name
                         .toLowerCase()
                         .split(' ')
                         .join('')}
                       href="#!"
-                      title={
-                        this.props.ghostList[this.props.ghostIndex].evidence[
-                          key
-                        ].name
-                      }
+                      title={list[i].evidence[key].name}
                     >
                       <img
-                        alt={
-                          this.props.ghostList[this.props.ghostIndex].evidence[
-                            key
-                          ].name
-                        }
-                        src={
-                          this.props.ghostList[this.props.ghostIndex].evidence[
-                            key
-                          ].img
-                        }
+                        alt={list[i].evidence[key].name}
+                        src={list[i].evidence[key].img}
                       />
                     </a>
                   );
@@ -63,30 +49,30 @@ export default class GhostInfo extends Component {
           <div className="s_w">
             <div className="strength">
               <h3>Strength</h3>
-              <p>{this.props.ghostList[this.props.ghostIndex].strength}</p>
+              <p>{list[i].strength}</p>
             </div>
             <div className="weakness">
               <h3>Weakness</h3>
-              <p>{this.props.ghostList[this.props.ghostIndex].weakness}</p>
+              <p>{list[i].weakness}</p>
             </div>
             <div className="abilities">
               <h3>Abilities</h3>
-              <p>{this.props.ghostList[this.props.ghostIndex].abilities}</p>
+              <p>{list[i].abilities}</p>
             </div>
           </div>
           <div className="behavior">
             <h3>Behavior</h3>
-            <p>{this.props.ghostList[this.props.ghostIndex].behavior}</p>
+            <p>{list[i].behavior}</p>
           </div>
           <div className="strategies">
             <h3>Strategies</h3>
-            <p>{this.props.ghostList[this.props.ghostIndex].strategies}</p>
+            <p>{list[i].strategies}</p>
           </div>
         </div>
         <a
           id="back_button"
           href="#!"
-          onClick={() => this.props.ghostInfoChange(false)}
+          onClick={() => parentProps.ghostInfoChange(false)}
         >
           <i className="gg-arrow-left-o"></i> Back to Ghost List
         </a>
