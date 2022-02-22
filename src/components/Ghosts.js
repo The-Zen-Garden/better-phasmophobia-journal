@@ -6,7 +6,11 @@ function Ghosts() {
   const [ghostList, setGhostList] = useState(ghosts);
   const [counter, setCounter] = useState(0);
   const [ghostIndex, setGhostIndex] = useState(0);
-  const [ghostInfoEnabled, setghostInfoEnabled] = useState(false);
+  const [ghostInfoEnabled, setGhostInfoEnabled] = useState(false);
+
+  function ghostInfoChange(b) {
+    setGhostInfoEnabled(b);
+  }
 
   function exclude(ghost, a) {
     let ghostListUpdated = ghostList;
@@ -18,9 +22,10 @@ function Ghosts() {
     setGhostList(ghostListUpdated);
   }
 
-  function ghostInfo(ghost, a) {
+  function ghostInfo(ghost) {
     let index = ghostList.findIndex((g) => g.name === ghost);
     setGhostIndex(index);
+    setGhostInfoEnabled(true);
   }
 
   const ghostItems = ghostList
@@ -43,7 +48,6 @@ function Ghosts() {
             title="Ghost Info"
             onClick={() => {
               ghostInfo(ghost.name);
-              setghostInfoEnabled(true);
             }}
           >
             <span>
@@ -89,6 +93,7 @@ function Ghosts() {
         ghostIndex={ghostIndex}
         ghostList={ghostList}
         ghostInfoEnabled={ghostInfoEnabled}
+        ghostInfoChange={ghostInfoChange}
       />
     </>
   );

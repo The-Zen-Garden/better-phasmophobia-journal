@@ -2,9 +2,17 @@ import React, { Component } from 'react';
 
 export default class GhostInfo extends Component {
   render() {
+    const parentProps = this.props;
+    function backgroundClick(e) {
+      e.target.className !== 'active' || parentProps.ghostInfoChange(false);
+    }
     return (
-      <div id="ghost_info">
-        <div className="info_block">
+      <div
+        id="ghost_info"
+        className={this.props.ghostInfoEnabled === true ? 'active' : ''}
+        onClick={(e) => backgroundClick(e)}
+      >
+        <div className="info_block" ref={this.infoRef}>
           <div className="header">
             <h2>
               <i className="gg-info"></i>
@@ -75,7 +83,11 @@ export default class GhostInfo extends Component {
             <p>{this.props.ghostList[this.props.ghostIndex].strategies}</p>
           </div>
         </div>
-        <a id="back_button" href="#!">
+        <a
+          id="back_button"
+          href="#!"
+          onClick={() => this.props.ghostInfoChange(false)}
+        >
           <i className="gg-arrow-left-o"></i> Back to Ghost List
         </a>
       </div>
