@@ -16,11 +16,11 @@ export const ghosts = [
       },
     },
     strength:
-      'A Raiju can siphon power from nearby electrical devices, making it move faster',
+      'A Raiju can siphon power from nearby electrical devices, making it move faster.',
     weakness:
-      'Raiju are constantly disrupting electronic equipment when attacking, making it easier to track',
+      'Raiju are constantly disrupting electronic equipment when attacking, making it easier to track.',
     abilities:
-      'Siphons power from electronic equipment, increasing aggression and bolstering speed during a hunt',
+      'Siphons power from electronic equipment, increasing aggression and bolstering speed during a hun.',
     behavior:
       "When a Raiju manifests during a ghost event or a hunt, it has a larger range from which it can interfere with electronic equipment, a range that increases with a larger map size.When nearby activated electronic equipment, the Raiju's hunt sanity threshold is increased to 65%, similar to a Yokai with talking. If a Raiju is close enough to at least one electronic equipment that is turned on such that it can interfere with it, the Raiju will have an increased movement speed of approximately 2.5 m/s, rivaling (though not matching) the speed of a Revenant. This applies to all electronics, both when held in the hand and items dropped on the floor. Only head mounted cameras, motion sensors and sound sensors do not count towards the speed boost.",
     strategies:
@@ -43,10 +43,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: 'Hunts more often than any other type of ghost',
-    weakness: 'Increased effective crucifix range',
+    strength: 'Hunts more often than any other type of ghost.',
+    weakness: 'Increased effective crucifix range.',
     abilities:
-      'Can hunt from 70% sanity. Rare chance to hunt at any sanity percentage',
+      'Can hunt from 70% sanity. Rare chance to hunt at any sanity percentage.',
     behavior:
       'A Demon can begin a hunt when the average sanity is below 70% instead of the usual 50% threshold, making the first hunt begin much earlier on average in the game. Additionally, the Demon has a rare chance to hunt at any time, regardless of current sanity level, including at the very beginning of a mission. On top of all this, Demons also have a minimum cooldown of 20 seconds between hunts, instead of the usual 25 seconds. Smudging a Demon will prevent hunts for only 60 seconds, as opposed to the standard 90 seconds. As a weakness, the effective range of a crucifix is 5 meters instead of the standard 3 meters.',
     strategies:
@@ -72,9 +72,9 @@ export const ghosts = [
     strength: 'Lower temperatures allow the Hantu to move at faster speeds.',
     weakness: 'Hantus move slower in warmer areas.',
     abilities:
-      'Moves much quicker in colder areas during hunts. Emits frosty breath in freezing rooms',
+      'Moves much quicker in colder areas during hunts. They Emit frosty breath in freezing rooms.',
     behavior:
-      "During a hunt, a Hantu's speed is affected by the temperature of the rooms that it goes through. This means that the Hantu is highly dependent on the map's breaker state, as the presence of power keeps the investigation area warm and thus slows the Hantu down.\r\n\r\nThe Hantu is twice as likely to choose turning off the breaker as an interaction, compared to other ghosts.\r\n\r\nWhen the Hantu manifests itself during a hunt, it will emit freezing breath when it is in a room with a temperature equal to or lower than 3°C (37.4°F). Dead players cannot see this breath.\r\n\r\nUnlike all other ghosts, the Hantu does not accelerate while maintaining line of sight during hunts.",
+      "During a hunt, a Hantu's speed is affected by the temperature of the rooms that it goes through. This means that the Hantu is highly dependent on the map's breaker state, as the presence of power keeps the investigation area warm and thus slows the Hantu down.\r\n\r\nThe Hantu is twice as likely to choose turning off the breaker as an interaction, compared to other ghosts.\r\n\r\nWhen the Hantu manifests itself during a hunt, it will emit freezing breath when it is in a room with a temperature equal to or lower than 3°C (37.4°F). Dead players cannot see this breath.\r\n\r\nUnlike all other ghosts, the Hantu does not accelerate while maintaining line of sight during hunts.",
     strategies:
       "The Hantu's ability to emit freezing breath in freezing rooms makes it easier to identify; players may carry smudge sticks to a cold location near the Hantu, smudge the ghost when it hunts, and use the few seconds in which it ignores the player to look for any freezing breath. Players may also consider turning off the breaker to reduce the time it takes for the Hantu to freeze a room if it roams or changes rooms, though the Hantu's increased speed in cold weather and player sanity drain should also be considered when deciding whether to do so.\r\n\r\nWhen the breaker is on and room temperatures are at their highest, it may be possible to loop the ghost during a hunt around a large furniture piece such as a kitchen counter, though players should consider that the mere presence of the ghost in that room will cool it down and make it increasingly harder to loop, especially during longer hunts.\r\n\r\nThe Hantu loses speed in real-time as it moves from a cold room to a warm room and vice-versa; players engage in risk to spot this behaviour, potentially allowing for the Hantu to be identified without evidence.",
     excluded: false,
@@ -95,12 +95,15 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: '',
-    weakness: '',
-    abilities: 'Travels significantly faster when chasing its target',
+    strength:
+      'A Revenant will travel at a significantly faster speed when hunting their prey.',
+    weakness: 'Hiding from the Revenant will cause it to move very slowly.',
+    abilities:
+      'Travels significantly faster (2x normal hunt speed) when chasing its target.',
     behavior:
       'When a Revenant is hunting, it will have one of two speeds: if it is not chasing a player in line of sight, it will roam at 0.5 times the speed of most other ghosts, but if it is actively chasing a player, it will do so at 2 times the speed of most other ghosts. The Revenant does not gain a speed bonus when in an extended chase with players.',
-    strategies: '',
+    strategies:
+      "Due to the Revenant's power, it is critical to hide as soon as possible during a hunt. A player will not be able to outrun a Revenant for long before it catches up to them. If you are caught running from a Revenant, your last resort is to use Smudge Sticks to ward it off for a few seconds, giving you enough time to break line of sight by turning corners and/or closing doors and hide from it.",
     excluded: false,
   },
   {
@@ -120,9 +123,10 @@ export const ghosts = [
       },
     },
     strength:
-      'Focuses on the same player until that player is killed or has left the game',
-    weakness: 'Makes unique paranormal sounds on a parabolic microphone',
-    abilities: '',
+      'Focuses on the same player until that player is killed or has left the game.',
+    weakness: 'Makes unique paranormal sounds on a parabolic microphone.',
+    abilities:
+      'Will only chase a single target unless that target is outside the location during a hunt. Unique shriek-like paranormal sound emitted from Parabolic Microphone.',
     behavior:
       "At the start of the game, a Banshee will randomly select a primary target. If the primary target dies or leaves the game, a new primary target will be selected.\r\n\r\nA Banshee will only check for their primary target's sanity when trying to initiate a hunt. When a Banshee hunts, it will mostly follow standard hunt rules, but it will ignore all players other than its target, unlike other ghosts, which generally chase any opportune player. It will not attempt to chase other players and will not kill them, even if it comes into contact with a non-target player. The Banshee will react to Smudge Sticks lit by other players, but this will not allow for completion of the \"Repel a ghost while it is chasing someone\" optional objective, unless the Banshee is also chasing its target when it is lit.\r\n\r\nIf a Banshee begins a hunt while its primary target is outside the building, the Banshee will temporarily select another target for that hunt, returning to its primary target once the hunt ends.\r\n\r\nThe Banshee also has a mechanic similar to the Phantom's, where it is more likely to roam to the location of its chosen target outside of a hunt.\r\n\r\nA Banshee will prefer to cause ghost events where it sings over other types of ghost events. When it performs a singing event near its target, they will have an additional 5% sanity drop on top of the standard sanity drain.\r\n\r\nOther than the effects stated above, being the Banshee's target does not appear to affect other mechanics such as the rate of interactions.\r\n\r\nWhen a Parabolic Microphone is used, the Banshee has a chance of making a unique shriek-like paranormal sound different from other ghosts.",
     strategies:
@@ -146,9 +150,10 @@ export const ghosts = [
       },
     },
     strength:
-      'Can hunt at higher sanity levelsWill try to turn off lights more often',
-    weakness: 'Turning lights on will lower its hunt sanity threshold to 40%',
-    abilities: '',
+      'Can hunt at higher sanity levels. Will try to turn off lights more often.',
+    weakness: 'Turning lights on will lower its hunt sanity threshold to 40%.',
+    abilities:
+      'Turns lights back off the moment a player turns them on. Stronger in darkness.',
     behavior:
       'If a player turns on a light near a Mare, it has a chance of turning the light off almost immediately. The Mare also has a higher chance of wandering into darker rooms. Mares are more likely to choose turning off lights as an interaction.\r\n\r\nA Mare has a modified hunt sanity threshold depending on whether the room it is currently in is lit. If the lights are turned off, the hunt sanity threshold is increased 60%, and if the lights are turned on, the threshold is decreased to 40%. Other sources of light, such as brought-in equipment and candles, do not affect this threshold. Mares cannot turn on lights by interacting with them, though they can turn them off.\r\n\r\nWhen performing a ghost event, Mares are more likely to choose one where the light bulbs explode, as this will disable the lights, making it easier to hunt.',
     strategies:
@@ -171,10 +176,12 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: 'Either Twin can be angered and initiate an attack on their prey',
+    strength:
+      'Either Twin can be angered and initiate an attack on their prey.',
     weakness:
-      'The Twins will often interact with the environment at the same time',
-    abilities: '',
+      'The Twins will often interact with the environment at the same time.',
+    abilities:
+      'One twin will remain static while the other wanders around, often causing misdirect.',
     behavior:
       'When The Twins are not hunting, they can move separately and interact with the environment on their own, or at the same time. There is one "main" Twin, which creates Freezing Temperatures, can respond to Spirit Box prompts, and can leave EMF Level 5 interactions. The "decoy" Twin does not set off motion sensors, and cannot respond to the Spirit Box nor spread Freezing Temperatures, but its interactions can give off EMF Level 5.\r\n\r\nWhen the ghost attempts to initiate a hunt, there is a 50% chance for it to begin at the "main" Twin, and a 50% chance for it to begin at the Twin that last interacted with the environment. When this happens, the Twin which initiated the hunt will follow standard hunting rules like most other ghost types. Both Twins cannot hunt at the same time, and they will follow the standard grace period between hunts.\r\n\r\nEach Twin has a different moving speed during hunts. The "main" Twin is said to move at either the normal ghost speed or 10% slower, while the "decoy" Twin will move 10% faster. Noticing a subtle change in speed from one hunt to another might indicate that the player is dealing with Twins.\r\n\r\nWhen using a crucifix in an attempt to prevent hunts, regardless of which Twin tries to hunt, the crucifix will check for the "main" Twin, even if the hunt is trying to start from far away.',
     strategies:
@@ -197,9 +204,9 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png',
       },
     },
-    strength: 'Can throw multiple objects at once',
-    weakness: 'Ineffective in empty rooms with no throwables',
-    abilities: 'Decrease sanity by throwing objects',
+    strength: 'Can throw multiple objects at once.',
+    weakness: 'Ineffective in empty rooms with no throwables.',
+    abilities: 'Decrease sanity by throwing objects.',
     behavior:
       'When a Poltergeist interacts with the environment, it has a chance of throwing multiple items at once. This will decrease the sanity of all player near the ghost by an amount equal to the number of items thrown multiplied by 2%. This will create an EMF level 3 reading. Poltergeists can also throw items with higher force than other ghosts.\r\n\r\nIf there are no items near a Poltergeist, it is unable to use its ability. This, however, will not prevent a hunt.',
     strategies:
@@ -222,9 +229,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png',
       },
     },
-    strength: '',
-    weakness: 'May leave behind six-fingered handprints',
-    abilities: 'Can leave fingerprints that disappear quicker',
+    strength:
+      'When interacting with the environment, an Obake will rarely leave a trace.',
+    weakness: 'May leave behind six-fingered handprints.',
+    abilities: 'Can leave fingerprints that disappear quicker.',
     behavior:
       'When interacting with a valid surface, the Obake has a 75% chance of creating fingerprints, instead of the usual 100%. Additionally, when creating handprints, there is an estimated 20%-25% chance that it will create a unique handprint that has 6 fingers instead of the usual 5.\r\n\r\nThe Obake occassionally triggers an ability to reduce the remaining time for all existing, lingering fingerprints on the map by half. For example, two fingerprints lingering on the map with 40 seconds and 70 seconds before timing out and disappearing are cut in half to 20 and 35 seconds remaining respectively. This ability can be triggered multiple times on the same fingerprints, making it possible for a fingerprint to disappear mere seconds after appearing.\r\n\r\nContrary to popular myths claiming otherwise, an Obake will not morph into a player model, does not have a unique ghost model that they can morph into, nor does it change models between manifestations and hunts. An Obake is still able to change between its fully-visible form, its translucent form, and its shadowy form between ghost events, which all ghosts are able to do. As such, one cannot tell whether a ghost is an Obake just by looking at its model.',
     strategies:
@@ -250,7 +258,7 @@ export const ghosts = [
     strength: 'Yureis have been known to have a stronger effect on sanity.',
     weakness:
       "Smudging the Yurei's place of death will trap it temporarily, reducing how much it wanders.",
-    abilities: 'Stronger effect on player Sanity',
+    abilities: 'Stronger effect on player Sanity.',
     behavior:
       'During a ghost event or a hunt, if the player is within 10 metres of a Yurei, their sanity will drop by 0.4% per second compared to 0.2% per second with most other ghosts, an ability similar to the Phantom.\r\n\r\nA Yurei has the ability to drop the sanity of all players within 7.5 metres by about 12.5%. When this happens, one selected door in the room that the ghost is currently in will close, similar to a manifestation ghost event, but the ghost will not actually appear or hiss. The Yurei will also prefer ghost events where it does a "hiss".\r\n\r\nWhen Smudge Sticks are used on the Yurei, it will not leave the room that it is currently in for 90 seconds.',
     strategies:
@@ -273,8 +281,8 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png',
       },
     },
-    strength: "Almost never touches the ground and doesn't leave footprints",
-    weakness: 'Has a toxic reaction to Salt',
+    strength: "Almost never touches the ground and doesn't leave footprints.",
+    weakness: 'Has a toxic reaction to salt.',
     abilities:
       'No footprints after stepping on a salt pile. Teleports to players randomly.',
     behavior:
@@ -299,9 +307,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: 'Can mimic the actions of other ghosts',
-    weakness: 'Induces Ghost Orbs as fourth evidence',
-    abilities: '',
+    strength: 'Can mimic the actions of other ghosts.',
+    weakness: 'Induces Ghost Orbs as fourth evidence.',
+    abilities:
+      'Unpredictable due to mirroring traits of other ghosts. This includes six-fingered handprints of the Obake.',
     behavior:
       'The Mimic is able to mirror the traits of other ghosts, such as leaving a six-fingered handprint that would otherwise identify an Obake. The Mimic may occasionally change the ghost type that it chooses to imitate every 30 seconds to about 2 minutes.\r\n\r\nThe Mimic also provides "evidence" of Ghost Orbs in addition to its three main evidence types, which also appear on Nightmare difficulty. In effect, this is the only ghost that would appear to have four types of evidence (or three on Nightmare). The Ghost Orbs, along with the other evidences if none are hidden due to the difficulty, will always exist regardless of the type of ghost that The Mimic chooses to imitate.',
     strategies:
@@ -324,9 +333,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: 'Can hunt from a flame extinguishing',
-    weakness: 'Lit flames prevent the ghost from hunting',
-    abilities: '',
+    strength: 'Can hunt from a flame extinguishing (candles and campfires.)',
+    weakness: 'Lit flames prevent the ghost from hunting.',
+    abilities:
+      'Hunt sanity threshold is 60% instead of 50%. Has a higher chance to blow out a flame than other ghosts.',
     behavior:
       "Onryo have a hunt sanity threshold of 60%, compared to the standard 50% baseline.\r\n\r\nWhen a lit candle, lighter, or campfire (in Maple Lodge Campsite) is extinguished near an Onryo, whether by itself or blown out by the ghost, there is a chance for the Onryo to begin a hunt, regardless of average sanity. Candles extinguishing due to being thrown does not count. The first three flames extinguished near the ghost in a contract will not result in a hunt. Subsequent flames extinguished have a 50% chance of resulting in a hunt. In multiplayer, this chance to hunt increases when players die, with a near-guaranteed chance when at least two players are dead.\r\n\r\nIf a flame is present near the ghost, the flame acts as a crucifix, preventing it from hunting within a range of 4m (versus a crucifix's 3m range). If it attempts to start a hunt within range of the flame, the hunt will fail and it will blow out the candle instead. Lit flames have priority to stop hunts over normal crucifixes. However, having a lit flame for this purpose also risks triggering an early hunt based on the previously mentioned mechanic. Multiple lit flames in close proximity can potentially cause a chain reaction.\r\n\r\nThe Onryo also has a higher chance to blow out a flame than other ghosts, further complicating the task of countering one.\r\n\r\nContrary to the Journal quote, the Onryo does not attempt to escape from lit candles.",
     strategies:
@@ -350,9 +360,10 @@ export const ghosts = [
       },
     },
     strength:
-      'More active when people are nearbyThrows objects at great speeds',
+      'More active when groups are nearby. Throws objects at great speeds.',
     weakness: "Easy to identify if it's more active.",
-    abilities: '',
+    abilities:
+      'Extremely strong and active. Often throws objects with more force but cannot throw multiple items at once.',
     behavior:
       "The Oni is more active, interacting with objects more often and causing more ghost events. An Oni cannot perform the smoke/mist-type ghost event that causes a hiss, but can still perform a manifestation (ghost) event and may hiss in that case. It also has a higher chance of showing in its full form during a manifestation event as opposed to a shadowy or translucent form.\r\n\r\nWhen interacting with objects, an Oni has a chance of throwing it higher and/or with more force, making it land further away. Unlike Poltergeists, they cannot throw multiple items at once, nor does interacting with items reduce the players' sanity.",
     strategies:
@@ -375,9 +386,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png',
       },
     },
-    strength: '',
-    weakness: '',
-    abilities: 'Only shows itself passing through D.O.T.S. on video camera',
+    strength:
+      'Will usually only show itself on camera if there are no people nearby.',
+    weakness: 'Rarely seen far from their place of death.',
+    abilities: 'Only shows itself passing through D.O.T.S. on video camera.',
     behavior:
       'A Goryo will only interact with a D.O.T.S. Projector if no players are nearby. In addition, its D.O.T.S. silhouette is only visible through a Video Camera, and cannot be seen with the naked eye. A Goryo will still manifest normally during ghost events and hunts with its ghost model, which does not require any special equipment to be seen.\r\n\r\nA Goryo is less likely to roam outside its ghost room when they are not hunting.',
     strategies:
@@ -402,9 +414,12 @@ export const ghosts = [
     },
     strength: 'Drains Sanity from those who look at it.',
     weakness: 'Temporarily disappears after a photo is taken of it.',
-    abilities: 'N/A',
-    behavior: '',
-    strategies: '',
+    abilities:
+      "Occasionally chooses a random player and navigates to their location, creating an EMF interaction at it's starting location.",
+    behavior:
+      "If a photo is a taken of a Phantom, it will disappear temporarily for that specific instance of it appearing. This will not affect its ability to cause a ghost event or hunt, and will not stop an ongoing hunt.\r\n\r\nPhantoms have an ability where it will occasionally choose a random player and navigate to their location, creating an Interaction EMF at its starting location.\r\n\r\nLooking at a Phantom within 10 meters of it will reduce the player's sanity by 0.4% each second, as opposed to 0.2% for other ghosts. This applies during both ghost events and hunts.\r\n\r\nDuring a hunt, a Phantom will flash visible every 1 to 2 seconds, as opposed to every 0.3 to 1 second for other ghosts, making it harder to take a photo of.",
+    strategies:
+      "Phantoms are easy to identify due to their weakness; taking a photo of the ghost will always cause a Phantom to disappear immediately upon the flash going off. The picture will be labelled as Ghost, but the Phantom will not be visible in the photo. The Phantom will remain invisible for the rest of that manifestation. Photos taken during a hunt will also show the Phantom in the photo, but it will then disappear for a short period before reappearing. Taking a photo will not end a manifestation or a hunt. Additionally, during a hunt, the ghost will be invisible for greater periods of time, and flicker less frequently than all other ghost types.\r\n\r\nPhantoms will drop a player's sanity significantly whenever it is seen manifesting or hunting; be mindful if you or one of your teammates are frequently seeing the ghost, as their Sanity will likely be quite low.",
     excluded: false,
   },
   {
@@ -423,9 +438,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png',
       },
     },
-    strength: '',
-    weakness: 'Can only hear and detect electronics within 2 metres of it',
-    abilities: 'Talking near it will increase its chance of hunting',
+    strength:
+      'Talking near a Yokai will anger it, increasing the chance of an attack.',
+    weakness: 'Can only hear and detect electronics within 2 meters of it.',
+    abilities: 'Talking near it will increase its chance of hunting.',
     behavior:
       "The abilities of a Yokai pertain to the presence of players' voices near it. The Yokai's hunt sanity threshold is increased to 80% while players are talking within a certain range of it, otherwise, it has the normal threshold of 50%. Talking near the Yokai at any sanity will also increase its activity.\r\n\r\nDuring hunts, a Yokai can only hear voices or sense electronics that are within 2 meters of it.",
     strategies:
@@ -448,10 +464,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png',
       },
     },
-    strength: '',
+    strength: 'Has no special powers to distinguish it from other ghosts.',
     weakness:
-      'Using Smudge Sticks on it will prevent it from Hunting for a long time',
-    abilities: '',
+      'Using Smudge Sticks on it will prevent it from Hunting for three minutes.',
+    abilities: 'N/A.',
     behavior:
       'When a Smudge Stick is used near a Spirit, it cannot initiate a hunt for 180 seconds instead of 90 seconds with most other ghosts.\r\n\r\nSpirits have no other special behaviour.',
     strategies:
@@ -474,9 +490,11 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: '',
-    weakness: '',
-    abilities: 'Rarely performs actions in the presence of multiple people',
+    strength: 'Being shy makes them much harder to find.',
+    weakness:
+      'The ghost will not enter a hunt if there are multiple people nearby.',
+    abilities:
+      'Rarely performs actions in the presence of multiple people. Appears as a transparent shadow when manifested by a Summoning Circle.',
     behavior:
       "Shades can hunt only below an average sanity of 35%, lower than most other ghosts.\r\n\r\nShades are less likely to perform interactions than most other ghosts when at least one player is in the same room as the ghost. When at least one player is in the same room as a Shade, the chance of it hunting will also be negated. This does not mean the Shade cannot hunt, however, as it can initiate a hunt in another room without the presence of players.\r\n\r\nShades are less likely to perform ghost events at high sanities. At 100% average sanity, an attempted ghost event will succeed 0% of the time. This success rate increases by 2% per percentage of average sanity lost; at an average sanity of 50%, an attempted ghost event will always succeed.\r\n\r\nWhen it performs a ghost event, Shades will prefer hissing into the player's ear instead of a full-manifestation. If it does manifest for a ghost event, it has a higher chance of not appearing fully solid.",
     strategies:
@@ -499,10 +517,12 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png',
       },
     },
-    strength: '',
-    weakness: '',
-    abilities: 'Travels at faster speeds if its target is far away',
-    behavior: '',
+    strength: 'A Jinn will travel at a faster speed if its victim is far away.',
+    weakness:
+      "Turning off the location's power source will prevent the Jinn from using its ability.",
+    abilities: 'Travels at faster speeds if its target is far away.',
+    behavior:
+      'During a hunt, when a Jinn enters the "chasing" mode by spotting a player, it will travel to them at a higher speed of 2.5 m/s, until they are within 2 metres of the player. They will then pursue the player at the standard ghost speed.\r\n\r\nThe Jinn has another ability, that when used, will lower the sanity of all players within a certain range by 25%. There is a currently unknown and very specific way to tell that this has occurred (other than checking the Sanity Monitor), concerning the Fuse Box.\r\n\r\nFor the Jinn to be able to use its abilities, the fuse box must be turned on. If the fuse box is not turned on, it cannot use either ability. Whether there are lights turned on or not does not affect this.\r\n\r\nA Jinn cannot turn off a breaker directly through interacting with it. It can still turn it off indirectly by turning on a light to exceed the limit on the number of lights that can be turned on.\r\n\r\nThere is a popular myth claiming the Jinn will interact with electronics often rather than other interactions; this is not true. A Jinn has an equal chance of interacting with anything nearby.',
     strategies:
       "A Jinn can be identified using its speed abilities. The fuse box should be turned on, and a player should wait in a large or long room for the ghost to hunt, with smudge sticks ready. The player should stand far away from where the ghost is expected to enter the room, with line-of-sight all the way through. When the ghost appears, observe whether it instantly gains speed to chase the player, then smudge it and escape. Repeat the test but with the fuse box off. If the ghost now chases the player at a slower speed, it is likely a Jinn. Note that the Revenant will also gain speed upon seeing a player, though this can be further differentiated by listening to its footsteps when not chasing a player, to see if it is moving slowly or at a normal speed.\r\n\r\nTurning off the location's breaker will prevent the Jinn from using its abilities. However, this will render the map's electrical lights inactive, thus leading to the players' sanity draining in the dark. Players will need to decide if preventing the Jinn from using its ability is worth dealing with more frequent hunts as a result of lower average sanity.",
     excluded: false,
@@ -523,9 +543,10 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png',
       },
     },
-    strength: 'Has quieter footsteps during hunts',
-    weakness: 'Produces paranormal sounds more frequently',
-    abilities: '',
+    strength: 'Has quieter footsteps during hunts.',
+    weakness: 'Produces paranormal sounds more frequently.',
+    abilities:
+      'Audible footsteps and electronics disruption have the same radius. Non-footstep sounds remain audible at the same distance as other ghosts.',
     behavior:
       "When not hunting, a Myling will make paranormal sounds more often than other ghosts. These can be heard through a Parabolic Microphone.\r\n\r\nWhen hunting, a Myling's footstep sounds will only be audible to players within 9 meters, similar to the distance required for electronic interference. Other hunting sounds (laugh, sing, wheeze, etc.) will remain audible at the same distance as other ghosts.",
     strategies:
