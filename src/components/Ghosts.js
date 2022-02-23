@@ -13,7 +13,20 @@ function Ghosts() {
   const [ghostsRender, setGhostsRender] = useState('');
 
   useEffect(() => {
-    console.log(ghostList[0].evidence);
+    function exclude(ghost, a) {
+      let ghostListUpdated = ghostList;
+      let index = ghostList.findIndex((g) => g.name === ghost);
+      setGhostIndex(index);
+      a
+        ? (ghostListUpdated[index].excluded = true)
+        : (ghostListUpdated[index].excluded = false);
+      setGhostList(ghostListUpdated);
+    }
+    function ghostInfo(ghost) {
+      let index = ghostList.findIndex((g) => g.name === ghost);
+      setGhostIndex(index);
+      setGhostInfoEnabled(true);
+    }
     const ghostItems = ghostList
       .sort((a, b) => {
         let name1 = a.name.toUpperCase(),
@@ -69,6 +82,7 @@ function Ghosts() {
             }
           }
         }
+        return null;
       })
       .map((ghost) => (
         <div
@@ -123,7 +137,7 @@ function Ghosts() {
         </div>
       ));
     setGhostsRender(ghostItems);
-  }, [activeEvidence]);
+  }, [activeEvidence, counter, ghostList]);
 
   useEffect(() => {
     function debounce(fn, ms) {
@@ -172,26 +186,9 @@ function Ghosts() {
     }
   }
 
-  function exclude(ghost, a) {
-    let ghostListUpdated = ghostList;
-    let index = ghostList.findIndex((g) => g.name === ghost);
-    setGhostIndex(index);
-    a
-      ? (ghostListUpdated[index].excluded = true)
-      : (ghostListUpdated[index].excluded = false);
-    setGhostList(ghostListUpdated);
-  }
-
-  function ghostInfo(ghost) {
-    let index = ghostList.findIndex((g) => g.name === ghost);
-    setGhostIndex(index);
-    setGhostInfoEnabled(true);
-  }
-
   return (
     <>
       <div id="ghosts">{ghostsRender}</div>
-      <p>{activeEvidence}</p>
       <GhostInfo
         ghostIndex={ghostIndex}
         ghostList={ghostList}
