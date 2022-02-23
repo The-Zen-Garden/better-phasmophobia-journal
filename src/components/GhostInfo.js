@@ -13,7 +13,7 @@ export default class GhostInfo extends Component {
     return (
       <div
         id="ghost_info"
-        className={!parentProps.ghostInfoEnabled || 'active'}
+        className={parentProps.ghostInfoEnabled ? 'active' : ''}
         onClick={(e) => backgroundClick(e)}
       >
         <div className="info_block" ref={this.infoRef}>
