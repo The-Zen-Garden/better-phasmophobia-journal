@@ -273,7 +273,7 @@ export const ghosts = [
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png',
       },
       1: {
-        name: 'Spirit Box (Evidence)',
+        name: 'Spirit Box',
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png',
       },
       2: {
@@ -400,7 +400,7 @@ export const ghosts = [
     name: 'Phantom',
     evidence: {
       0: {
-        name: 'Spirit Box (Evidence)',
+        name: 'Spirit Box',
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png',
       },
       1: {
@@ -426,7 +426,7 @@ export const ghosts = [
     name: 'Yokai',
     evidence: {
       0: {
-        name: 'Spirit Box (Evidence)',
+        name: 'Spirit Box',
         img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png',
       },
       1: {

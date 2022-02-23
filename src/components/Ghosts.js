@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ghosts } from '../data/ghosts';
+import { evidence } from '../data/evidence';
+import Evidence from './Evidence';
 import GhostInfo from './GhostInfo';
 
 function Ghosts() {
@@ -7,6 +9,7 @@ function Ghosts() {
   const [counter, setCounter] = useState(0);
   const [ghostIndex, setGhostIndex] = useState(0);
   const [ghostInfoEnabled, setGhostInfoEnabled] = useState(false);
+  const [activeEvidence, setActiveEvidence] = useState([]);
 
   useEffect(() => {
     function debounce(fn, ms) {
@@ -25,9 +28,10 @@ function Ghosts() {
       const ghostsHeight = document.querySelector('#ghosts').offsetHeight;
       const windowHeight = window.innerHeight;
       if (ghostsHeight + evidenceHeight > windowHeight) {
-        document.body.style.paddingBottom = evidenceHeight + 'px';
+        document.querySelector('#ghosts').style.paddingBottom =
+          evidenceHeight + 'px';
       } else {
-        document.body.style.paddingBottom = 0;
+        document.querySelector('#ghosts').style.paddingBottom = 0;
       }
     }, 1000);
 
@@ -38,6 +42,14 @@ function Ghosts() {
 
   function ghostInfoChange(b) {
     setGhostInfoEnabled(b);
+  }
+
+  function activeEvidenceChange(ev, add) {
+    if (add === 1) {
+      setActiveEvidence(activeEvidence.concat(ev));
+    } else {
+      setActiveEvidence(activeEvidence.filter((ae) => ae !== ev));
+    }
   }
 
   function handleKeyDown(e) {
@@ -124,6 +136,7 @@ function Ghosts() {
   return (
     <>
       <div id="ghosts">{ghostItems}</div>
+      <p>{activeEvidence}</p>
       <GhostInfo
         ghostIndex={ghostIndex}
         ghostList={ghostList}
@@ -131,71 +144,11 @@ function Ghosts() {
         ghostInfoChange={ghostInfoChange}
         handleKeyDown={handleKeyDown}
       />
-      <div id="evidence">
-        <div className="evidence dots_projector">
-          <a className="" href="#!" title="D.O.T.S. Projector">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
-            />
-            <h2>D.O.T.S. Projector</h2>
-          </a>
-        </div>
-        <div className="evidence emf_level_5">
-          <a className="" href="#!" title="EMF Level 5">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
-            />
-            <h2>EMF Level 5</h2>
-          </a>
-        </div>
-        <div className="evidence fingerprints">
-          <a className="" href="#!" title="Fingerprints">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
-            />
-            <h2>Finger Prints</h2>
-          </a>
-        </div>
-        <div className="evidence freezing_temperatures">
-          <a className="" href="#!" title="Freezing Temperatures">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
-            />
-            <h2>Freezing Temps</h2>
-          </a>
-        </div>
-        <div className="evidence ghost_orbs">
-          <a className="" href="#!" title="Ghost Orbs">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
-            />
-            <h2>Ghost Orbs</h2>
-          </a>
-        </div>
-        <div className="evidence ghost_writing">
-          <a className="" href="#!" title="Ghost Writing">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
-            />
-            <h2>Ghost Writing</h2>
-          </a>
-        </div>
-        <div className="evidence spirit_box">
-          <a className="not_active" href="#!" title="Spirit Box">
-            <img
-              alt=""
-              src="https://static.wikia.nocookie.net/phasmophobia/images/4/4c/SpiritBox_Ghost.png"
-            />
-            <h2>Spirit Box</h2>
-          </a>
-        </div>
-      </div>
+      <Evidence
+        evidence={evidence}
+        activeEvidence={activeEvidence}
+        activeEvidenceChange={activeEvidenceChange}
+      />
     </>
   );
 }
