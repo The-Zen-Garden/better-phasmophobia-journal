@@ -2,17 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ghosts } from '../data/ghosts';
 import GhostInfo from './GhostInfo';
 
-function debounce(fn, ms) {
-  let timer;
-  return (_) => {
-    clearTimeout(timer);
-    timer = setTimeout((_) => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
-
 function Ghosts() {
   const [ghostList, setGhostList] = useState(ghosts);
   const [counter, setCounter] = useState(0);
@@ -20,6 +9,16 @@ function Ghosts() {
   const [ghostInfoEnabled, setGhostInfoEnabled] = useState(false);
 
   useEffect(() => {
+    function debounce(fn, ms) {
+      let timer;
+      return (_) => {
+        clearTimeout(timer);
+        timer = setTimeout((_) => {
+          timer = null;
+          fn.apply(this, arguments);
+        }, ms);
+      };
+    }
     const debouncedHandleResize = debounce(function addPadding() {
       const evidenceHeight =
         document.querySelector('#evidence').offsetHeight + 40;
@@ -39,6 +38,12 @@ function Ghosts() {
 
   function ghostInfoChange(b) {
     setGhostInfoEnabled(b);
+  }
+
+  function handleKeyDown(e) {
+    if (e.keyCode === 27) {
+      setGhostInfoEnabled(false);
+    }
   }
 
   function exclude(ghost, a) {
@@ -77,6 +82,7 @@ function Ghosts() {
             title="Ghost Info"
             onClick={() => {
               ghostInfo(ghost.name);
+              document.getElementById('ghost_info').focus();
             }}
           >
             <span>
@@ -123,6 +129,7 @@ function Ghosts() {
         ghostList={ghostList}
         ghostInfoEnabled={ghostInfoEnabled}
         ghostInfoChange={ghostInfoChange}
+        handleKeyDown={handleKeyDown}
       />
       <div id="evidence">
         <div className="evidence dots_projector">

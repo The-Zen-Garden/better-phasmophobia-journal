@@ -15,6 +15,8 @@ export default class GhostInfo extends Component {
         id="ghost_info"
         className={parentProps.ghostInfoEnabled ? 'active' : ''}
         onClick={(e) => backgroundClick(e)}
+        onKeyDown={(e) => parentProps.handleKeyDown(e)}
+        tabIndex="0"
       >
         <div className="info_block" ref={this.infoRef}>
           <div className="header">
