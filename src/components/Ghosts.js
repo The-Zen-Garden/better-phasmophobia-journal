@@ -10,6 +10,120 @@ function Ghosts() {
   const [ghostIndex, setGhostIndex] = useState(0);
   const [ghostInfoEnabled, setGhostInfoEnabled] = useState(false);
   const [activeEvidence, setActiveEvidence] = useState([]);
+  const [ghostsRender, setGhostsRender] = useState('');
+
+  useEffect(() => {
+    console.log(ghostList[0].evidence);
+    const ghostItems = ghostList
+      .sort((a, b) => {
+        let name1 = a.name.toUpperCase(),
+          name2 = b.name.toUpperCase();
+        return name1 === name2 ? 0 : name1 > name2 ? 1 : -1;
+      })
+      .filter((ghost) => {
+        if (activeEvidence.length === 0) {
+          return ghost;
+        }
+        if (activeEvidence.length === 1) {
+          if (
+            ghost.evidence[0].name === activeEvidence[0] ||
+            ghost.evidence[1].name === activeEvidence[0] ||
+            ghost.evidence[2].name === activeEvidence[0]
+          ) {
+            return ghost;
+          }
+        }
+        if (activeEvidence.length === 2) {
+          if (
+            ghost.evidence[0].name === activeEvidence[1] ||
+            ghost.evidence[1].name === activeEvidence[1] ||
+            ghost.evidence[2].name === activeEvidence[1]
+          ) {
+            if (
+              ghost.evidence[0].name === activeEvidence[0] ||
+              ghost.evidence[1].name === activeEvidence[0] ||
+              ghost.evidence[2].name === activeEvidence[0]
+            ) {
+              return ghost;
+            }
+          }
+        }
+        if (activeEvidence.length === 3) {
+          if (
+            ghost.evidence[0].name === activeEvidence[2] ||
+            ghost.evidence[1].name === activeEvidence[2] ||
+            ghost.evidence[2].name === activeEvidence[2]
+          ) {
+            if (
+              ghost.evidence[0].name === activeEvidence[1] ||
+              ghost.evidence[1].name === activeEvidence[1] ||
+              ghost.evidence[2].name === activeEvidence[1]
+            ) {
+              if (
+                ghost.evidence[0].name === activeEvidence[0] ||
+                ghost.evidence[1].name === activeEvidence[0] ||
+                ghost.evidence[2].name === activeEvidence[0]
+              ) {
+                return ghost;
+              }
+            }
+          }
+        }
+      })
+      .map((ghost) => (
+        <div
+          key={ghost.name.toLowerCase().split(' ').join('')}
+          className={`ghost ${ghost.name.toLowerCase().split(' ').join('')}${
+            ghost.excluded !== true ? '' : ' disabled'
+          }`}
+        >
+          <h2>{ghost.name}</h2>
+          <div className="actions">
+            <a
+              href="#!"
+              title="Ghost Info"
+              onClick={() => {
+                ghostInfo(ghost.name);
+                document.getElementById('ghost_info').focus();
+              }}
+            >
+              <span>
+                <i className="gg-info"></i>
+              </span>
+            </a>
+
+            {ghost.excluded !== true ? (
+              <a
+                href="#!"
+                title="Exclude Ghost"
+                onClick={() => {
+                  exclude(ghost.name, true);
+                  setCounter(counter + 1);
+                }}
+              >
+                <span>
+                  <i className="gg-close-o"></i>
+                </span>
+              </a>
+            ) : (
+              <a
+                href="#!"
+                title="Include Ghost"
+                onClick={() => {
+                  exclude(ghost.name, false);
+                  setCounter(counter + 1);
+                }}
+              >
+                <span>
+                  <i className="gg-check-o"></i>
+                </span>
+              </a>
+            )}
+          </div>
+        </div>
+      ));
+    setGhostsRender(ghostItems);
+  }, [activeEvidence]);
 
   useEffect(() => {
     function debounce(fn, ms) {
@@ -45,10 +159,10 @@ function Ghosts() {
   }
 
   function activeEvidenceChange(ev, add) {
-    if (add === 1) {
+    if (add) {
       setActiveEvidence(activeEvidence.concat(ev));
     } else {
-      setActiveEvidence(activeEvidence.filter((ae) => ae !== ev));
+      setActiveEvidence(activeEvidence.filter((evidence) => evidence !== ev));
     }
   }
 
@@ -74,68 +188,9 @@ function Ghosts() {
     setGhostInfoEnabled(true);
   }
 
-  const ghostItems = ghostList
-    .sort((a, b) => {
-      let name1 = a.name.toUpperCase(),
-        name2 = b.name.toUpperCase();
-      return name1 === name2 ? 0 : name1 > name2 ? 1 : -1;
-    })
-    .map((ghost) => (
-      <div
-        key={ghost.name.toLowerCase().split(' ').join('')}
-        className={`ghost ${ghost.name.toLowerCase().split(' ').join('')}${
-          ghost.excluded !== true ? '' : ' disabled'
-        }`}
-      >
-        <h2>{ghost.name}</h2>
-        <div className="actions">
-          <a
-            href="#!"
-            title="Ghost Info"
-            onClick={() => {
-              ghostInfo(ghost.name);
-              document.getElementById('ghost_info').focus();
-            }}
-          >
-            <span>
-              <i className="gg-info"></i>
-            </span>
-          </a>
-
-          {ghost.excluded !== true ? (
-            <a
-              href="#!"
-              title="Exclude Ghost"
-              onClick={() => {
-                exclude(ghost.name, true);
-                setCounter(counter + 1);
-              }}
-            >
-              <span>
-                <i className="gg-close-o"></i>
-              </span>
-            </a>
-          ) : (
-            <a
-              href="#!"
-              title="Include Ghost"
-              onClick={() => {
-                exclude(ghost.name, false);
-                setCounter(counter + 1);
-              }}
-            >
-              <span>
-                <i className="gg-check-o"></i>
-              </span>
-            </a>
-          )}
-        </div>
-      </div>
-    ));
-
   return (
     <>
-      <div id="ghosts">{ghostItems}</div>
+      <div id="ghosts">{ghostsRender}</div>
       <p>{activeEvidence}</p>
       <GhostInfo
         ghostIndex={ghostIndex}
