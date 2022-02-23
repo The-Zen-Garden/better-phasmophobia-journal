@@ -14,7 +14,6 @@ export default class Evidence extends Component {
       ) {
         e.target.classList.add('active');
         parentProps.activeEvidenceChange(e.target.title, 1);
-        console.log('add');
         return;
       }
 
@@ -24,7 +23,6 @@ export default class Evidence extends Component {
       ) {
         e.target.classList.remove('active');
         parentProps.activeEvidenceChange(e.target.title, 0);
-        console.log('remove');
         return;
       }
     }
