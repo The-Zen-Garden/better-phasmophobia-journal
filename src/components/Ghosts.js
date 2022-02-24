@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
 import { ghosts } from '../data/ghosts';
 import { evidence } from '../data/evidence';
 import Evidence from './Evidence';
@@ -102,6 +100,7 @@ function Ghosts() {
                 e.preventDefault();
                 ghostInfo(ghost.name);
                 document.getElementById('ghost_info').focus();
+                document.querySelector('#ghost_info').scrollTo(0, 0);
               }}
             >
               <span>
