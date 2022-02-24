@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 import { ghosts } from '../data/ghosts';
 import { evidence } from '../data/evidence';
 import Evidence from './Evidence';
@@ -93,45 +95,67 @@ function Ghosts() {
         >
           <h2>{ghost.name}</h2>
           <div className="actions">
-            <a
-              href="#!"
-              title="Ghost Info"
-              onClick={() => {
-                ghostInfo(ghost.name);
-                document.getElementById('ghost_info').focus();
-              }}
+            <Tippy
+              content="Ghost Info"
+              placement="bottom"
+              delay={[150, 0]}
+              onShow={() => Tippy.hideAll}
             >
-              <span>
-                <i className="gg-info"></i>
-              </span>
-            </a>
+              <a
+                href="#!"
+                // title="Ghost Info"
+                onClick={(e) => {
+                  e.preventDefault();
+                  ghostInfo(ghost.name);
+                  document.getElementById('ghost_info').focus();
+                }}
+              >
+                <span>
+                  <i className="gg-info"></i>
+                </span>
+              </a>
+            </Tippy>
 
             {ghost.excluded !== true ? (
-              <a
-                href="#!"
-                title="Exclude Ghost"
-                onClick={() => {
-                  exclude(ghost.name, true);
-                  setCounter(counter + 1);
-                }}
+              <Tippy
+                content="Exclude Ghost"
+                placement="bottom"
+                delay={[150, 0]}
+                onShow={() => Tippy.hideAll}
               >
-                <span>
-                  <i className="gg-close-o"></i>
-                </span>
-              </a>
+                <a
+                  href="#!"
+                  // title="Exclude Ghost"
+                  onClick={() => {
+                    exclude(ghost.name, true);
+                    setCounter(counter + 1);
+                  }}
+                >
+                  <span>
+                    <i className="gg-close-o"></i>
+                  </span>
+                </a>
+              </Tippy>
             ) : (
-              <a
-                href="#!"
-                title="Include Ghost"
-                onClick={() => {
-                  exclude(ghost.name, false);
-                  setCounter(counter + 1);
-                }}
+              <Tippy
+                content="Include Ghost"
+                placement="bottom"
+                delay={[150, 0]}
+                onShow={() => Tippy.hideAll}
               >
-                <span>
-                  <i className="gg-check-o"></i>
-                </span>
-              </a>
+                <a
+                  href="#!"
+                  // title="Include Ghost"
+                  onClick={() => {
+                    exclude(ghost.name, false);
+                    setCounter(counter + 1);
+                  }}
+                >
+                  <span>
+                    <i className="gg-check-o"></i>
+                  </span>
+                </a>
+              </Tippy>
             )}
           </div>
         </div>

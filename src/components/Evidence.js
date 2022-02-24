@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 export default class Evidence extends Component {
   render() {
@@ -13,7 +15,7 @@ export default class Evidence extends Component {
         !e.target.classList.contains('active')
       ) {
         e.target.classList.add('active');
-        parentProps.activeEvidenceChange(e.target.title, 1);
+        parentProps.activeEvidenceChange(e.target.querySelector('img').alt, 1);
         return;
       }
 
@@ -22,7 +24,7 @@ export default class Evidence extends Component {
         e.target.classList.contains('active')
       ) {
         e.target.classList.remove('active');
-        parentProps.activeEvidenceChange(e.target.title, 0);
+        parentProps.activeEvidenceChange(e.target.querySelector('img').alt, 0);
         return;
       }
     }
@@ -38,14 +40,19 @@ export default class Evidence extends Component {
                 .split(' ')
                 .join('')}`}
             >
-              <a
-                className={evidence[key].name.toLowerCase().split(' ').join('')}
-                href="#!"
-                title={evidence[key].name}
-                onClick={(e) => setEvidence(e)}
-              >
-                <img alt={evidence[key].name} src={evidence[key].img} />
-              </a>
+              <Tippy content={`${evidence[key].name}`} placement="top">
+                <a
+                  className={evidence[key].name
+                    .toLowerCase()
+                    .split(' ')
+                    .join('')}
+                  href="#!"
+                  // title={evidence[key].name}
+                  onClick={(e) => setEvidence(e)}
+                >
+                  <img alt={evidence[key].name} src={evidence[key].img} />
+                </a>
+              </Tippy>
             </div>
           );
         })}

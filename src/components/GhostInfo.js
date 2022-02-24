@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 export default class GhostInfo extends Component {
   render() {
@@ -26,23 +28,30 @@ export default class GhostInfo extends Component {
               <div className="evidence">
                 {Object.entries(list[i].evidence).map(([key]) => {
                   return (
-                    <a
-                      key={list[i].evidence[key].name
-                        .toLowerCase()
-                        .split(' ')
-                        .join('')}
-                      className={list[i].evidence[key].name
-                        .toLowerCase()
-                        .split(' ')
-                        .join('')}
-                      href="#!"
-                      title={list[i].evidence[key].name}
+                    <Tippy
+                      content={list[i].evidence[key].name}
+                      placement="bottom"
+                      delay={[150, 0]}
+                      onShow={() => Tippy.hideAll}
                     >
-                      <img
-                        alt={list[i].evidence[key].name}
-                        src={list[i].evidence[key].img}
-                      />
-                    </a>
+                      <a
+                        key={list[i].evidence[key].name
+                          .toLowerCase()
+                          .split(' ')
+                          .join('')}
+                        className={list[i].evidence[key].name
+                          .toLowerCase()
+                          .split(' ')
+                          .join('')}
+                        href="#!"
+                        // title={list[i].evidence[key].name}
+                      >
+                        <img
+                          alt={list[i].evidence[key].name}
+                          src={list[i].evidence[key].img}
+                        />
+                      </a>
+                    </Tippy>
                   );
                 })}
               </div>
