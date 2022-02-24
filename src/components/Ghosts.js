@@ -95,67 +95,46 @@ function Ghosts() {
         >
           <h2>{ghost.name}</h2>
           <div className="actions">
-            <Tippy
-              content="Ghost Info"
-              placement="bottom"
-              delay={[150, 0]}
-              onShow={() => Tippy.hideAll}
+            <a
+              href="#!"
+              title="Ghost Info"
+              onClick={(e) => {
+                e.preventDefault();
+                ghostInfo(ghost.name);
+                document.getElementById('ghost_info').focus();
+              }}
             >
+              <span>
+                <i className="gg-info"></i>
+              </span>
+            </a>
+
+            {ghost.excluded !== true ? (
               <a
                 href="#!"
-                // title="Ghost Info"
-                onClick={(e) => {
-                  e.preventDefault();
-                  ghostInfo(ghost.name);
-                  document.getElementById('ghost_info').focus();
+                title="Exclude Ghost"
+                onClick={() => {
+                  exclude(ghost.name, true);
+                  setCounter(counter + 1);
                 }}
               >
                 <span>
-                  <i className="gg-info"></i>
+                  <i className="gg-close-o"></i>
                 </span>
               </a>
-            </Tippy>
-
-            {ghost.excluded !== true ? (
-              <Tippy
-                content="Exclude Ghost"
-                placement="bottom"
-                delay={[150, 0]}
-                onShow={() => Tippy.hideAll}
-              >
-                <a
-                  href="#!"
-                  // title="Exclude Ghost"
-                  onClick={() => {
-                    exclude(ghost.name, true);
-                    setCounter(counter + 1);
-                  }}
-                >
-                  <span>
-                    <i className="gg-close-o"></i>
-                  </span>
-                </a>
-              </Tippy>
             ) : (
-              <Tippy
-                content="Include Ghost"
-                placement="bottom"
-                delay={[150, 0]}
-                onShow={() => Tippy.hideAll}
+              <a
+                href="#!"
+                title="Include Ghost"
+                onClick={() => {
+                  exclude(ghost.name, false);
+                  setCounter(counter + 1);
+                }}
               >
-                <a
-                  href="#!"
-                  // title="Include Ghost"
-                  onClick={() => {
-                    exclude(ghost.name, false);
-                    setCounter(counter + 1);
-                  }}
-                >
-                  <span>
-                    <i className="gg-check-o"></i>
-                  </span>
-                </a>
-              </Tippy>
+                <span>
+                  <i className="gg-check-o"></i>
+                </span>
+              </a>
             )}
           </div>
         </div>
