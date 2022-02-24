@@ -44,7 +44,7 @@ export default class GhostInfo extends Component {
                           .split(' ')
                           .join('')}
                         href="#!"
-                        title={list[i].evidence[key].name}
+                        // title={list[i].evidence[key].name}
                       >
                         <img
                           alt={list[i].evidence[key].name}
