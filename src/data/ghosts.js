@@ -169,7 +169,7 @@ export const ghosts = [
       },
       1: {
         name: 'Spirit Box',
-        img: 'https://static.wikia.nocookie.net/phasmophobia/images/4/4c/SpiritBox_Ghost.png',
+        img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png',
       },
       2: {
         name: 'Freezing Temperatures',
@@ -296,7 +296,7 @@ export const ghosts = [
     evidence: {
       0: {
         name: 'Spirit Box',
-        img: 'https://static.wikia.nocookie.net/phasmophobia/images/4/4c/SpiritBox_Ghost.png',
+        img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png',
       },
       1: {
         name: 'Fingerprints',
@@ -322,7 +322,7 @@ export const ghosts = [
     evidence: {
       0: {
         name: 'Spirit Box',
-        img: 'https://static.wikia.nocookie.net/phasmophobia/images/4/4c/SpiritBox_Ghost.png',
+        img: 'https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png',
       },
       1: {
         name: 'Ghost Orb',
