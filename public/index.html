@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="An alternative web-based Phasmophobia journal that leverages Fandom snippets to enhance ghost hunts."
+      content="An alternative Phasmophobia journal that leverages Fandom wiki snippets to optimize ghost hunts."
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
@@ -21,7 +21,21 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Better Phasmophobia Journal</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0G9071WFLC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-0G9071WFLC');
+    </script>
+    <title>Better Phasmophobia Journal | v0.5.2.0</title>
   </head>
   <body>
     <noscript>You can't hunt ghosts without JavaScript enabled.</noscript>
