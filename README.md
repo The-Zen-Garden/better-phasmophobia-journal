@@ -1,4 +1,4 @@
-![Better Phasmophobia Journal](https://i.ibb.co/qM5v9Cg/bpj.jpg)
+[![View site on Netlify](https://i.ibb.co/qM5v9Cg/bpj.jpg)](https://better-phasmophobia-journal.netlify.app/ "View site on Netlify")
 
 ### Welcome back,
 It appears some hunters are struggling to navigate between clues and community insight when gauging ghost behavior. We've attempted to bridge that gap by providing an [alternative journal](https://better-phasmophobia-journal.netlify.app/) to ensure ghosts are tracked as optimally as possible.
