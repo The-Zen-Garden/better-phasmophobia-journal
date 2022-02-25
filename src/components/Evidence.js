@@ -31,26 +31,23 @@ export default class Evidence extends Component {
 
     return (
       <div id="evidence">
-        {Object.entries(evidence).map(([key]) => {
+        {evidence.map((evident, index) => {
           return (
             <div
-              key={evidence[key].name.toLowerCase().split(' ').join('')}
-              className={`evidence ${evidence[key].name
+              key={index}
+              className={`evidence ${evident.name
                 .toLowerCase()
                 .split(' ')
                 .join('')}`}
             >
-              <Tippy content={`${evidence[key].name}`} placement="top">
+              <Tippy content={`${evident.name}`} placement="top">
                 <a
-                  className={evidence[key].name
-                    .toLowerCase()
-                    .split(' ')
-                    .join('')}
+                  className={evident.name.toLowerCase().split(' ').join('')}
                   href="#!"
                   // title={evidence[key].name}
                   onClick={(e) => setEvidence(e)}
                 >
-                  <img alt={evidence[key].name} src={evidence[key].img} />
+                  <img alt={evident.name} src={evident.img} />
                 </a>
               </Tippy>
             </div>
