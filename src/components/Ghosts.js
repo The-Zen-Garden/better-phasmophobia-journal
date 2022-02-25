@@ -29,9 +29,7 @@ function Ghosts() {
     }
     const ghostItems = ghostList
       .sort((a, b) => {
-        let name1 = a.name.toUpperCase(),
-          name2 = b.name.toUpperCase();
-        return name1 === name2 ? 0 : name1 > name2 ? 1 : -1;
+        return a.name.localeCompare(b.name);
       })
       .filter((ghost) => {
         if (activeEvidence.length === 0) {
