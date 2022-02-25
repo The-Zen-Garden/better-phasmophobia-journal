@@ -105,3 +105,6 @@ dist
 
 # Create-React-App build output
 build/
+
+# VSCode Settings
+.vscode
