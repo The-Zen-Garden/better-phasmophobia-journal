@@ -91,8 +91,7 @@ function Ghosts() {
         >
           <h2>{ghost.name}</h2>
           <div className="actions">
-            <a
-              href="#!"
+            <button
               title="Ghost Info"
               onClick={(e) => {
                 e.preventDefault();
@@ -104,11 +103,10 @@ function Ghosts() {
               <span>
                 <i className="gg-info"></i>
               </span>
-            </a>
+            </button>
 
             {ghost.excluded !== true ? (
-              <a
-                href="#!"
+              <button
                 title="Exclude Ghost"
                 onClick={() => {
                   exclude(ghost.name, true);
@@ -118,10 +116,9 @@ function Ghosts() {
                 <span>
                   <i className="gg-close-o"></i>
                 </span>
-              </a>
+              </button>
             ) : (
-              <a
-                href="#!"
+              <button
                 title="Include Ghost"
                 onClick={() => {
                   exclude(ghost.name, false);
@@ -131,7 +128,7 @@ function Ghosts() {
                 <span>
                   <i className="gg-check-o"></i>
                 </span>
-              </a>
+              </button>
             )}
           </div>
         </div>

@@ -37,14 +37,13 @@ function Evidence(props) {
               .join('')}`}
           >
             <Tippy content={`${evident.name}`} placement="top">
-              <a
+              <button
                 className={evident.name.toLowerCase().split(' ').join('')}
-                href="#!"
                 // title={evidence[key].name}
                 onClick={(e) => setEvidence(e)}
               >
                 <img alt={evident.name} src={evident.img} />
-              </a>
+              </button>
             </Tippy>
           </div>
         );

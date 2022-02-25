@@ -36,19 +36,18 @@ function GhostInfo(props) {
                     delay={[150, 0]}
                     onShow={() => Tippy.hideAll}
                   >
-                    <a
+                    <button
                       className={list[i].evidence[key].name
                         .toLowerCase()
                         .split(' ')
                         .join('')}
-                      href="#!"
                       // title={list[i].evidence[key].name}
                     >
                       <img
                         alt={list[i].evidence[key].name}
                         src={list[i].evidence[key].img}
                       />
-                    </a>
+                    </button>
                   </Tippy>
                 );
               })}
@@ -78,13 +77,9 @@ function GhostInfo(props) {
           <p>{list[i].strategies}</p>
         </div>
       </div>
-      <a
-        id="back_button"
-        href="#!"
-        onClick={() => props.ghostInfoChange(false)}
-      >
+      <button id="back_button" onClick={() => props.ghostInfoChange(false)}>
         <i className="gg-arrow-left-o"></i> Back to Ghost List
-      </a>
+      </button>
     </div>
   );
 }

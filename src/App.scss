@@ -43,6 +43,12 @@ p {
   font-weight: 300;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 #app {
   margin: 0 auto;
   max-width: 970px;
@@ -83,7 +89,7 @@ p {
     }
     & > h2 {
       pointer-events: none;
-      font-size: max(min(1.6vmin, 19px), 16px);
+      font-size: max(min(1.6vmax, 19px), 16px);
       font-weight: 300;
       width: 100%;
       margin: 0;
@@ -98,7 +104,7 @@ p {
       opacity: 0;
       overflow: hidden;
       transition: var(--main-animation-default);
-      & > a {
+      & > button {
         width: 50%;
         height: 100%;
         display: block;
@@ -206,22 +212,27 @@ p {
     backdrop-filter: blur(5px);
   }
   & > #back_button {
-    width: 190px;
+    width: 210px;
+    width: fit-content;
     font-weight: 300;
     text-align: center;
     left: 50%;
-    transform: translate(-50%, -70px);
+    transform: translate(calc(-50% + 16px), 0);
     font-size: 14px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 24px;
     text-indent: 8px;
-    position: absolute;
+    position: sticky;
+    bottom: 40px;
     padding: 8px 12px;
     background-color: #cb2535;
     border-radius: var(--main-border-radius);
     transition: var(--main-animation-default);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.52),
+      0 -10px 10px rgba(0, 0, 0, 0.52), 50px 0 50px rgba(0, 0, 0, 0.52),
+      -25px 0 25px rgba(0, 0, 0, 0.52);
     &:hover {
       background-color: lighten($red, 5);
     }
@@ -231,9 +242,10 @@ p {
   }
   & > .info_block {
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px;
     max-width: 760px;
-    margin: 5px auto 90px;
+    margin: 5px auto 80px;
+    padding-bottom: 30px;
     & > .header {
       padding: 0 10px;
       & > h2 {
@@ -249,7 +261,7 @@ p {
           align-items: center;
           justify-content: space-between;
           width: 96px;
-          & > a {
+          & > button {
             cursor: help;
             border-radius: var(--main-border-radius);
             border: 1px solid rgba(40, 40, 40, 1);
@@ -267,7 +279,7 @@ p {
       }
     }
     & h3 {
-      font-size: max(min(1.8vmin, 20px), 18px);
+      font-size: max(min(1.8vmax, 20px), 18px);
       position: relative;
       overflow: hidden;
       margin-bottom: 0;
@@ -284,7 +296,7 @@ p {
       }
     }
     & p {
-      font-size: max(min(1.4vmin, 16px), 14px);
+      font-size: max(min(1.4vmax, 16px), 14px);
       margin-top: 10px;
     }
     & > .s_w {
@@ -332,7 +344,7 @@ p {
   backdrop-filter: blur(3px);
 
   & > .evidence {
-    & > a {
+    & > button {
       color: var(--main-text-color);
       width: 100%;
       height: 48px;
