@@ -1,93 +1,92 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-export default class GhostInfo extends Component {
-  render() {
-    const parentProps = this.props;
-    const i = parentProps.ghostIndex;
-    const list = parentProps.ghostList;
+function GhostInfo(props) {
+  const i = props.ghostIndex;
+  const list = props.ghostList;
 
-    function backgroundClick(e) {
-      e.target.className !== 'active' || parentProps.ghostInfoChange(false);
-    }
+  function backgroundClick(e) {
+    e.target.className !== 'active' || props.ghostInfoChange(false);
+  }
 
-    return (
-      <div
-        id="ghost_info"
-        className={parentProps.ghostInfoEnabled ? 'active' : ''}
-        onClick={(e) => backgroundClick(e)}
-        onKeyDown={(e) => parentProps.handleKeyDown(e)}
-        tabIndex="0"
-      >
-        <div className="info_block" ref={this.infoRef}>
-          <div className="header">
-            <h2>
-              <i className="gg-info"></i>
-              {list[i].name}
-              <div className="evidence">
-                {Object.entries(list[i].evidence).map(([key]) => {
-                  return (
-                    <Tippy
-                      key={list[i].evidence[key].name
+  return (
+    <div
+      id="ghost_info"
+      className={props.ghostInfoEnabled ? 'active' : ''}
+      onClick={(e) => backgroundClick(e)}
+      onKeyDown={(e) => props.handleKeyDown(e)}
+      tabIndex="0"
+    >
+      <div className="info_block">
+        <div className="header">
+          <h2>
+            <i className="gg-info"></i>
+            {list[i].name}
+            <div className="evidence">
+              {Object.entries(list[i].evidence).map(([key]) => {
+                return (
+                  <Tippy
+                    key={list[i].evidence[key].name
+                      .toLowerCase()
+                      .split(' ')
+                      .join('')}
+                    content={list[i].evidence[key].name}
+                    placement="bottom"
+                    delay={[150, 0]}
+                    onShow={() => Tippy.hideAll}
+                  >
+                    <a
+                      className={list[i].evidence[key].name
                         .toLowerCase()
                         .split(' ')
                         .join('')}
-                      content={list[i].evidence[key].name}
-                      placement="bottom"
-                      delay={[150, 0]}
-                      onShow={() => Tippy.hideAll}
+                      href="#!"
+                      // title={list[i].evidence[key].name}
                     >
-                      <a
-                        className={list[i].evidence[key].name
-                          .toLowerCase()
-                          .split(' ')
-                          .join('')}
-                        href="#!"
-                        // title={list[i].evidence[key].name}
-                      >
-                        <img
-                          alt={list[i].evidence[key].name}
-                          src={list[i].evidence[key].img}
-                        />
-                      </a>
-                    </Tippy>
-                  );
-                })}
-              </div>
-            </h2>
-          </div>
-          <div className="s_w">
-            <div className="strength">
-              <h3>Strength</h3>
-              <p>{list[i].strength}</p>
+                      <img
+                        alt={list[i].evidence[key].name}
+                        src={list[i].evidence[key].img}
+                      />
+                    </a>
+                  </Tippy>
+                );
+              })}
             </div>
-            <div className="weakness">
-              <h3>Weakness</h3>
-              <p>{list[i].weakness}</p>
-            </div>
-            <div className="abilities">
-              <h3>Abilities</h3>
-              <p>{list[i].abilities}</p>
-            </div>
+          </h2>
+        </div>
+        <div className="s_w">
+          <div className="strength">
+            <h3>Strength</h3>
+            <p>{list[i].strength}</p>
           </div>
-          <div className="behavior">
-            <h3>Behavior</h3>
-            <p>{list[i].behavior}</p>
+          <div className="weakness">
+            <h3>Weakness</h3>
+            <p>{list[i].weakness}</p>
           </div>
-          <div className="strategies">
-            <h3>Strategies</h3>
-            <p>{list[i].strategies}</p>
+          <div className="abilities">
+            <h3>Abilities</h3>
+            <p>{list[i].abilities}</p>
           </div>
         </div>
-        <a
-          id="back_button"
-          href="#!"
-          onClick={() => parentProps.ghostInfoChange(false)}
-        >
-          <i className="gg-arrow-left-o"></i> Back to Ghost List
-        </a>
+        <div className="behavior">
+          <h3>Behavior</h3>
+          <p>{list[i].behavior}</p>
+        </div>
+        <div className="strategies">
+          <h3>Strategies</h3>
+          <p>{list[i].strategies}</p>
+        </div>
       </div>
-    );
-  }
+      <a
+        id="back_button"
+        href="#!"
+        onClick={() => props.ghostInfoChange(false)}
+      >
+        <i className="gg-arrow-left-o"></i> Back to Ghost List
+      </a>
+    </div>
+  );
 }
+
+export default GhostInfo;
