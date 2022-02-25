@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ghosts } from '../data/ghosts';
-import { evidence } from '../data/evidence';
+import ghosts from '../data/ghosts';
+import evidence from '../data/evidence';
 import Evidence from './Evidence';
 import GhostInfo from './GhostInfo';
 
