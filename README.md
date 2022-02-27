@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c1c924aa-d94e-495f-a7e8-1ed5256c2264/deploy-status)](https://better-phasmophobia-journal.netlify.app/)
+
 [![View site on Netlify](https://i.ibb.co/qM5v9Cg/bpj.jpg)](https://better-phasmophobia-journal.netlify.app/ "View site on Netlify")
 
 ### Welcome back,
