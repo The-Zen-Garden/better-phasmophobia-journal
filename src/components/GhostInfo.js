@@ -2,20 +2,20 @@ import React from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-function GhostInfo(props) {
-  const i = props.ghostIndex;
-  const list = props.ghostList;
+function GhostInfo({ ghostIndex, ghostList, ghostInfoChange, ghostInfoEnabled, handleKeyDown }) {
+  const i = ghostIndex;
+  const list = ghostList;
 
   function backgroundClick(e) {
-    e.target.className !== 'active' || props.ghostInfoChange(false);
+    e.target.className !== 'active' || ghostInfoChange(false);
   }
 
   return (
     <div
       id="ghost_info"
-      className={props.ghostInfoEnabled ? 'active' : ''}
+      className={ghostInfoEnabled ? 'active' : ''}
       onClick={(e) => backgroundClick(e)}
-      onKeyDown={(e) => props.handleKeyDown(e)}
+      onKeyDown={(e) => handleKeyDown(e)}
       tabIndex="0"
     >
       <div className="info_block">
@@ -77,7 +77,7 @@ function GhostInfo(props) {
           <p>{list[i].strategies}</p>
         </div>
       </div>
-      <button id="back_button" onClick={() => props.ghostInfoChange(false)}>
+      <button id="back_button" onClick={() => ghostInfoChange(false)}>
         <i className="gg-arrow-left-o"></i> Back to Ghost List
       </button>
     </div>

@@ -3,6 +3,7 @@ import ghosts from '../data/ghosts.json';
 import evidence from '../data/evidence.json';
 import Evidence from './Evidence';
 import GhostInfo from './GhostInfo';
+import GhostCard from './GhostCard';
 
 function Ghosts() {
   const [ghostList, setGhostList] = useState(ghosts);
@@ -17,15 +18,28 @@ function Ghosts() {
       let ghostListUpdated = ghostList;
       let index = ghostList.findIndex((g) => g.name === ghost);
       setGhostIndex(index);
-      a
-        ? (ghostListUpdated[index].excluded = true)
-        : (ghostListUpdated[index].excluded = false);
+      ghostListUpdated[index] = { ...ghostList[index], excluded: a };
+      console.log(ghostList);
       setGhostList(ghostListUpdated);
     }
     function ghostInfo(ghost) {
       let index = ghostList.findIndex((g) => g.name === ghost);
       setGhostIndex(index);
       setGhostInfoEnabled(true);
+    }
+    function handleInfo(e, name) {
+      e.preventDefault();
+      ghostInfo(name);
+      document.getElementById('ghost_info').focus();
+      document.querySelector('#ghost_info').scrollTo(0, 0);
+    }
+    function handleExclude(name) {
+      exclude(name, true);
+      setCounter(counter + 1);
+    }
+    function handleInclude(name) {
+      exclude(name, false);
+      setCounter(counter + 1);
     }
     const ghostItems = ghostList
       .sort((a, b) => {
@@ -82,57 +96,18 @@ function Ghosts() {
         }
         return null;
       })
-      .map((ghost) => (
-        <div
-          key={ghost.name.toLowerCase().split(' ').join('')}
-          className={`ghost ${ghost.name.toLowerCase().split(' ').join('')}${
-            ghost.excluded !== true ? '' : ' disabled'
-          }`}
-        >
-          <h2>{ghost.name}</h2>
-          <div className="actions">
-            <button
-              title="Ghost Info"
-              onClick={(e) => {
-                e.preventDefault();
-                ghostInfo(ghost.name);
-                document.getElementById('ghost_info').focus();
-                document.querySelector('#ghost_info').scrollTo(0, 0);
-              }}
-            >
-              <span>
-                <i className="gg-info"></i>
-              </span>
-            </button>
-
-            {ghost.excluded !== true ? (
-              <button
-                title="Exclude Ghost"
-                onClick={() => {
-                  exclude(ghost.name, true);
-                  setCounter(counter + 1);
-                }}
-              >
-                <span>
-                  <i className="gg-close-o"></i>
-                </span>
-              </button>
-            ) : (
-              <button
-                title="Include Ghost"
-                onClick={() => {
-                  exclude(ghost.name, false);
-                  setCounter(counter + 1);
-                }}
-              >
-                <span>
-                  <i className="gg-check-o"></i>
-                </span>
-              </button>
-            )}
-          </div>
-        </div>
-      ));
+      .map(({ name, excluded }) => {
+        return (
+          <GhostCard
+            key={name}
+            name={name}
+            excluded={excluded}
+            onInfo={(e) => handleInfo(e, name)}
+            onExclude={() => handleExclude(name)}
+            onInclude={() => handleInclude(name)}
+          />
+        );
+      });
     setGhostsRender(ghostItems);
   }, [activeEvidence, counter, ghostList]);
 
