@@ -2,7 +2,13 @@ import React from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-function GhostInfo({ ghostIndex, ghostList, ghostInfoChange, ghostInfoEnabled, handleKeyDown }) {
+function GhostInfo({
+  ghostIndex,
+  ghostList,
+  ghostInfoChange,
+  ghostInfoEnabled,
+  handleKeyDown,
+}) {
   const i = ghostIndex;
   const list = ghostList;
 
@@ -77,9 +83,11 @@ function GhostInfo({ ghostIndex, ghostList, ghostInfoChange, ghostInfoEnabled, h
           <p>{list[i].strategies}</p>
         </div>
       </div>
-      <button id="back_button" onClick={() => ghostInfoChange(false)}>
-        <i className="gg-arrow-left-o"></i> Back to Ghost List
-      </button>
+      <span>
+        <button id="back_button" onClick={() => ghostInfoChange(false)}>
+          <i className="gg-arrow-left-o"></i> Back to Ghost List
+        </button>
+      </span>
     </div>
   );
 }
