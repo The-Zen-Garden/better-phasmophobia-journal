@@ -1,25 +1,27 @@
 import React from 'react';
+import clsx from 'clsx';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { useJournal, useJournalDispatch } from '../context/journalContext';
 
-function GhostInfo({
-  ghostIndex,
-  ghostList,
-  ghostInfoChange,
-  ghostInfoEnabled,
-  handleKeyDown,
-}) {
-  const i = ghostIndex;
-  const list = ghostList;
+function GhostInfo() {
+  const { info, displayInfo } = useJournal();
+  const { hideInfo } = useJournalDispatch();
 
   function backgroundClick(e) {
-    e.target.className !== 'active' || ghostInfoChange(false);
+    e.target.className !== 'active' || hideInfo();
+  }
+
+  function handleKeyDown(e) {
+    if (e.keyCode === 27) {
+      hideInfo();
+    }
   }
 
   return (
     <div
       id="ghost_info"
-      className={ghostInfoEnabled ? 'active' : ''}
+      className={clsx(displayInfo && 'active')}
       onClick={(e) => backgroundClick(e)}
       onKeyDown={(e) => handleKeyDown(e)}
       tabIndex="0"
@@ -28,30 +30,29 @@ function GhostInfo({
         <div className="header">
           <h2>
             <i className="gg-info"></i>
-            {list[i].name}
+            {info.name}
             <div className="evidence">
-              {Object.entries(list[i].evidence).map(([key]) => {
+              {Object.entries(info.evidence).map(([key]) => {
                 return (
                   <Tippy
-                    key={list[i].evidence[key].name
+                    key={info.evidence[key].name
                       .toLowerCase()
                       .split(' ')
                       .join('')}
-                    content={list[i].evidence[key].name}
+                    content={info.evidence[key].name}
                     placement="bottom"
                     delay={[150, 0]}
                     onShow={() => Tippy.hideAll}
                   >
                     <button
-                      className={list[i].evidence[key].name
+                      className={info.evidence[key].name
                         .toLowerCase()
                         .split(' ')
                         .join('')}
-                      // title={list[i].evidence[key].name}
                     >
                       <img
-                        alt={list[i].evidence[key].name}
-                        src={list[i].evidence[key].img}
+                        alt={info.evidence[key].name}
+                        src={info.evidence[key].img}
                       />
                     </button>
                   </Tippy>
@@ -63,28 +64,28 @@ function GhostInfo({
         <div className="s_w">
           <div className="strength">
             <h3>Strength</h3>
-            <p>{list[i].strength}</p>
+            <p>{info.strength}</p>
           </div>
           <div className="weakness">
             <h3>Weakness</h3>
-            <p>{list[i].weakness}</p>
+            <p>{info.weakness}</p>
           </div>
           <div className="abilities">
             <h3>Abilities</h3>
-            <p>{list[i].abilities}</p>
+            <p>{info.abilities}</p>
           </div>
         </div>
         <div className="behavior">
           <h3>Behavior</h3>
-          <p>{list[i].behavior}</p>
+          <p>{info.behavior}</p>
         </div>
         <div className="strategies">
           <h3>Strategies</h3>
-          <p>{list[i].strategies}</p>
+          <p>{info.strategies}</p>
         </div>
       </div>
       <span>
-        <button id="back_button" onClick={() => ghostInfoChange(false)}>
+        <button id="back_button" onClick={hideInfo}>
           <i className="gg-arrow-left-o"></i> Back to Ghost List
         </button>
       </span>

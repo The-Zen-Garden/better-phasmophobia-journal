@@ -1,10 +1,13 @@
 import './App.scss';
-import Ghosts from './components/Ghosts';
+import Journal from './components/Journal';
+import { JournalProvider } from './context/journalContext';
 
 function App() {
   return (
     <div id="app">
-      <Ghosts />
+      <JournalProvider>
+        <Journal />
+      </JournalProvider>
     </div>
   );
 }
