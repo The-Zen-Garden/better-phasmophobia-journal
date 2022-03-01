@@ -1,11 +1,14 @@
 import React from 'react';
+import clsx from 'clsx';
 
 const GhostCard = ({ name, excluded, onInfo, onExclude, onInclude }) => {
   return (
     <div
-      className={`ghost ${name.toLowerCase().split(' ').join('')}${
-        excluded !== true ? '' : ' disabled'
-      }`}
+      className={clsx(
+        'ghost',
+        name.toLowerCase().split(' ').join(''),
+        excluded === true && 'disabled'
+      )}
     >
       <h2>{name}</h2>
       <div className="actions">
