@@ -32,27 +32,27 @@ function GhostInfo() {
             <i className="gg-info"></i>
             {info.name}
             <div className="evidence">
-              {Object.entries(info.evidence).map(([key]) => {
+              {info.evidence.map((el, i) => {
                 return (
                   <Tippy
-                    key={info.evidence[key].name
+                    key={info.evidence[i].name
                       .toLowerCase()
                       .split(' ')
                       .join('')}
-                    content={info.evidence[key].name}
+                    content={info.evidence[i].name}
                     placement="bottom"
                     delay={[150, 0]}
                     onShow={() => Tippy.hideAll}
                   >
                     <button
-                      className={info.evidence[key].name
+                      className={info.evidence[i].name
                         .toLowerCase()
                         .split(' ')
                         .join('')}
                     >
                       <img
-                        alt={info.evidence[key].name}
-                        src={info.evidence[key].img}
+                        alt={info.evidence[i].name}
+                        src={info.evidence[i].img}
                       />
                     </button>
                   </Tippy>
