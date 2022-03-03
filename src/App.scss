@@ -230,7 +230,7 @@ button {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          width: 96px;
+          width: 100px;
           & > button {
             cursor: help;
             border-radius: var(--main-border-radius);
@@ -239,10 +239,10 @@ button {
             display: flex;
             align-items: center;
             justify-items: center;
-            padding: 3px;
+            padding: 2px;
             & > img {
-              width: 20px;
-              height: 20px;
+              width: 24px;
+              height: 24px;
             }
           }
         }
@@ -280,7 +280,7 @@ button {
       & > .strength,
       & > .weakness,
       & > .abilities {
-        padding: 0 20px;
+        padding: 0 16px;
         white-space: pre-wrap;
       }
     }
