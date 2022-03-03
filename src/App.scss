@@ -217,7 +217,7 @@ button {
     max-width: 760px;
     margin: 5px auto 0;
     & > .header {
-      padding: 0 10px;
+      padding: 0 8px;
       & > h2 {
         & > i {
           float: left;
@@ -253,6 +253,7 @@ button {
       position: relative;
       overflow: hidden;
       margin-bottom: 0;
+      margin-top: 12px;
 
       &:after {
         top: calc(50% - 1px);
@@ -290,7 +291,7 @@ button {
       border-radius: var(--main-border-radius);
       border: 1px solid rgba(40, 40, 40, 1);
       background-color: #212121;
-      padding: 0 20px 5px;
+      padding: 0 16px 5px;
       margin-top: 20px;
       white-space: pre-wrap;
     }
