@@ -7,6 +7,7 @@ $green: #18b725;
 }
 
 :root {
+  --main-evidence-total: 7;
   --main-bg-color: #000;
   --main-text-color: #fff;
   --main-font-default: 'Rubik', sans-serif;
@@ -345,7 +346,10 @@ button {
 #evidence {
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc((100% / var(--main-evidence-total)) - 5px), 1fr)
+  );
   position: fixed;
   margin-left: -5px;
   bottom: 0;
@@ -401,8 +405,8 @@ button {
       }
 
       & > img {
-        width: 32px;
-        height: 32px;
+        width: 100%;
+        max-width: 32px;
         transform: scale(1);
       }
       & > h2 {
