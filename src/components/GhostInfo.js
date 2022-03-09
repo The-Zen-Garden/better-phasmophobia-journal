@@ -5,21 +5,53 @@ import 'tippy.js/dist/tippy.css';
 import { useJournal, useJournalDispatch } from '../context/journalContext';
 
 function GhostInfo() {
+  const { ghostList } = useJournal();
   const { info, displayInfo } = useJournal();
-  const { hideInfo } = useJournalDispatch();
+  const { hideInfo, showInfo } = useJournalDispatch();
+
+  const handleInfo = (next, ghostName) => {
+    document.getElementById('ghost_info').focus();
+    document.querySelector('#ghost_info').scrollTo(0, 0);
+    const filteredGhosts = ghostList.filter((ghost) => !ghost.eliminated);
+    const ghostNumber = filteredGhosts.findIndex(
+      (ghost) => ghost.name === ghostName
+    );
+    if (ghostNumber !== 0 && ghostNumber !== filteredGhosts.length - 1) {
+      next
+        ? showInfo(filteredGhosts[ghostNumber + 1])
+        : showInfo(filteredGhosts[ghostNumber - 1]);
+    } else {
+      next
+        ? showInfo(filteredGhosts[+1])
+        : showInfo(filteredGhosts[filteredGhosts.length - 1]);
+    }
+    if (ghostNumber === filteredGhosts.length - 1) {
+      next
+        ? showInfo(filteredGhosts[0])
+        : showInfo(filteredGhosts[ghostNumber - 1]);
+    }
+  };
 
   function backgroundClick(e) {
     e.target.className !== 'active' || hideInfo();
   }
 
   function handleKeyDown(e) {
+    const ghostName = e.target.attributes.ghost.value;
     if (e.keyCode === 27) {
       hideInfo();
+    }
+    if (e.keyCode === 39) {
+      handleInfo(true, ghostName);
+    }
+    if (e.keyCode === 37) {
+      handleInfo(false, ghostName);
     }
   }
 
   return (
     <div
+      ghost={info.name}
       id="ghost_info"
       className={clsx(displayInfo && 'active')}
       onClick={(e) => backgroundClick(e)}

@@ -181,7 +181,7 @@ button {
 #ghost_info {
   transform: scale(0);
   transform-origin: center top;
-  overflow-y: auto;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -269,7 +269,7 @@ button {
     }
     & p {
       font-size: max(min(1.4vmax, 16px), 14px);
-      margin-top: 10px;
+      margin: 8px 0 16px;
     }
     & > .s_w {
       display: grid;
@@ -278,7 +278,6 @@ button {
       border-radius: var(--main-border-radius);
       border: 1px solid rgba(40, 40, 40, 1);
       background-color: #212121;
-      padding-bottom: 5px;
       & > .strength,
       & > .weakness,
       & > .abilities {
@@ -292,7 +291,7 @@ button {
       border-radius: var(--main-border-radius);
       border: 1px solid rgba(40, 40, 40, 1);
       background-color: #212121;
-      padding: 0 16px 5px;
+      padding: 0 16px;
       margin-top: 20px;
       white-space: pre-wrap;
     }
