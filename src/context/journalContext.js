@@ -45,8 +45,8 @@ const reducer = (draft, action) => {
       );
       return draft;
     case ActionTypes.HIDE_INFO:
-      document.activeElement.blur();
       draft.displayInfo = false;
+      document.activeElement.blur();
       return draft;
     case ActionTypes.INCLUDE_GHOST:
       draft.ghostList[action.index].excluded = false;
@@ -54,6 +54,8 @@ const reducer = (draft, action) => {
     case ActionTypes.SHOW_INFO:
       draft.info = { ...action.ghost };
       draft.displayInfo = true;
+      document.getElementById('ghost_info').focus();
+      document.querySelector('#ghost_info').scrollTo(0, 0);
       return draft;
     default:
   }

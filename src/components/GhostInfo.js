@@ -35,8 +35,6 @@ function GhostInfo() {
   }
 
   function handleKeyDown(e) {
-    document.getElementById('ghost_info').focus();
-    document.querySelector('#ghost_info').scrollTo(0, 0);
     const ghostName = e.target.attributes.ghost.value;
     if (e.keyCode === 27) {
       hideInfo();
