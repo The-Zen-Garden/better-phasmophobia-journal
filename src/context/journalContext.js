@@ -45,6 +45,7 @@ const reducer = (draft, action) => {
       );
       return draft;
     case ActionTypes.HIDE_INFO:
+      document.activeElement.blur();
       draft.displayInfo = false;
       return draft;
     case ActionTypes.INCLUDE_GHOST:
