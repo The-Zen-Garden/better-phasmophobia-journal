@@ -3,11 +3,19 @@ import clsx from 'clsx';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { useJournal, useJournalDispatch } from '../context/journalContext';
+import { useSwipeable } from 'react-swipeable';
 
 function GhostInfo() {
   const { ghostList } = useJournal();
   const { info, displayInfo } = useJournal();
   const { hideInfo, showInfo } = useJournalDispatch();
+  const swipeConfig = {
+    delta: 50,
+    preventDefaultTouchmoveEvent: false,
+    trackTouch: true,
+    trackMouse: false,
+    rotationAngle: 0,
+  };
 
   const handleInfo = (next, ghostName) => {
     const filteredGhosts = ghostList.filter((ghost) => !ghost.eliminated);
@@ -30,10 +38,26 @@ function GhostInfo() {
     }
   };
 
-  function backgroundClick(e) {
-    e.target.className !== 'active' || hideInfo();
-  }
+  // Swipe Input
+  const handlers = useSwipeable({
+    onSwipedLeft: (data) => {
+      let ghostName =
+        data.event.path[
+          data.event.path.findIndex((a) => a.id === 'ghost_info')
+        ].getAttribute('ghost');
+      handleInfo(true, ghostName);
+    },
+    onSwipedRight: (data) => {
+      let ghostName =
+        data.event.path[
+          data.event.path.findIndex((a) => a.id === 'ghost_info')
+        ].getAttribute('ghost');
+      handleInfo(false, ghostName);
+    },
+    ...swipeConfig,
+  });
 
+  // Key Input
   function handleKeyDown(e) {
     const ghostName = e.target.attributes.ghost.value;
     if (e.keyCode === 27) {
@@ -47,6 +71,10 @@ function GhostInfo() {
     }
   }
 
+  function backgroundClick(e) {
+    e.target.className !== 'active' || hideInfo();
+  }
+
   return (
     <div
       ghost={info.name}
@@ -55,6 +83,7 @@ function GhostInfo() {
       onClick={(e) => backgroundClick(e)}
       onKeyDown={(e) => handleKeyDown(e)}
       tabIndex="0"
+      {...handlers}
     >
       <div className="info_block">
         <div className="header">
