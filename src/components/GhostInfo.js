@@ -10,7 +10,7 @@ function GhostInfo() {
   const { info, displayInfo } = useJournal();
   const { hideInfo, showInfo } = useJournalDispatch();
   const swipeConfig = {
-    delta: 100,
+    delta: 75,
     preventDefaultTouchmoveEvent: false,
     trackTouch: true,
     trackMouse: false,
