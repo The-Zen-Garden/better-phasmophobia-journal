@@ -9,13 +9,6 @@ function GhostInfo() {
   const { ghostList } = useJournal();
   const { info, displayInfo } = useJournal();
   const { hideInfo, showInfo } = useJournalDispatch();
-  const swipeConfig = {
-    delta: 75,
-    preventDefaultTouchmoveEvent: false,
-    trackTouch: true,
-    trackMouse: false,
-    rotationAngle: 0,
-  };
 
   const handleInfo = (next, ghostName) => {
     const filteredGhosts = ghostList.filter((ghost) => !ghost.eliminated);
@@ -40,7 +33,7 @@ function GhostInfo() {
     }
   };
 
-  // Swipe Input
+  // Swipe gesture input
   const handlers = useSwipeable({
     onSwipedLeft: (data) => {
       let ghostName =
@@ -56,10 +49,16 @@ function GhostInfo() {
         ].getAttribute('ghost');
       handleInfo(false, ghostName);
     },
-    ...swipeConfig,
+    ...{
+      delta: 75,
+      preventDefaultTouchmoveEvent: false,
+      trackTouch: true,
+      trackMouse: false,
+      rotationAngle: 0,
+    },
   });
 
-  // Key Input
+  // onKeyDown input
   function handleKeyDown(e) {
     const ghostName = e.target.attributes.ghost.value;
     if (e.keyCode === 27) {
@@ -73,6 +72,7 @@ function GhostInfo() {
     }
   }
 
+  // onClick input
   function backgroundClick(e) {
     e.target.className !== 'active' || hideInfo();
   }
