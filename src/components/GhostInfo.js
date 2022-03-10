@@ -22,19 +22,21 @@ function GhostInfo() {
     const ghostNumber = filteredGhosts.findIndex(
       (ghost) => ghost.name === ghostName
     );
-    if (ghostNumber !== 0 && ghostNumber !== filteredGhosts.length - 1) {
-      next
-        ? showInfo(filteredGhosts[ghostNumber + 1])
-        : showInfo(filteredGhosts[ghostNumber - 1]);
-    } else {
-      next
-        ? showInfo(filteredGhosts[+1])
-        : showInfo(filteredGhosts[filteredGhosts.length - 1]);
-    }
-    if (ghostNumber === filteredGhosts.length - 1) {
-      next
-        ? showInfo(filteredGhosts[0])
-        : showInfo(filteredGhosts[ghostNumber - 1]);
+    switch (ghostNumber) {
+      case 0:
+        next
+          ? showInfo(filteredGhosts[+1])
+          : showInfo(filteredGhosts[filteredGhosts.length - 1]);
+        break;
+      case filteredGhosts.length - 1:
+        next
+          ? showInfo(filteredGhosts[0])
+          : showInfo(filteredGhosts[ghostNumber - 1]);
+        break;
+      default:
+        next
+          ? showInfo(filteredGhosts[ghostNumber + 1])
+          : showInfo(filteredGhosts[ghostNumber - 1]);
     }
   };
 
