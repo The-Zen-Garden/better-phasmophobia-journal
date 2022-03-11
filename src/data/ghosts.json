@@ -4,15 +4,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Can siphon power from nearby electrical devices, making it move faster.",
@@ -26,15 +26,15 @@
     "evidence": [
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Hunts more often than any other type of ghost.",
@@ -48,15 +48,15 @@
     "evidence": [
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Lower temperatures allow the Hantu to move at faster speeds.",
@@ -70,15 +70,15 @@
     "evidence": [
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Travels at a significantly faster speed when hunting their prey.",
@@ -92,15 +92,15 @@
     "evidence": [
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Focuses on the same player until that player is killed or has left the game.",
@@ -114,15 +114,15 @@
     "evidence": [
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       }
     ],
     "strength": "Can hunt at higher sanity levels. Will try to turn off lights more often.",
@@ -136,15 +136,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Either Twin can be angered and initiate an attack on their prey.",
@@ -158,15 +158,15 @@
     "evidence": [
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       }
     ],
     "strength": "Can throw multiple objects at once.",
@@ -180,15 +180,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       }
     ],
     "strength": "When interacting with the environment, an Obake will rarely leave a trace.",
@@ -202,15 +202,15 @@
     "evidence": [
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Have a stronger effect on sanity.",
@@ -224,15 +224,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Almost never touches the ground and doesn't leave footprints.",
@@ -246,15 +246,15 @@
     "evidence": [
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Can mimic the actions of other ghosts.",
@@ -268,15 +268,15 @@
     "evidence": [
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Can hunt from a flame extinguishing (candles and campfires.)",
@@ -290,15 +290,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "More active when groups are nearby. Throws objects at great speeds.",
@@ -312,15 +312,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Will usually only show itself on camera if there are no people nearby.",
@@ -334,15 +334,15 @@
     "evidence": [
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Drains Sanity from those who look at it.",
@@ -356,15 +356,15 @@
     "evidence": [
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Ghost Orb",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/db/GhostOrb_Sprite.png"
+        "img": "assets/images/GhostOrb_Sprite.png"
       },
       {
         "name": "D.O.T.S. Projector",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/7/73/DOTS_projector_sprite.png"
+        "img": "assets/images/DOTS_projector_sprite.png"
       }
     ],
     "strength": "Talking near them will anger it, increasing the chance of an attack.",
@@ -378,15 +378,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Spirit Box",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/d/d2/SpiritBox_Render.png"
+        "img": "assets/images/SpiritBox_Render.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       }
     ],
     "strength": "Has no special powers to distinguish it from other ghosts.",
@@ -400,15 +400,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Being shy makes them much harder to find.",
@@ -422,15 +422,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Freezing Temperatures",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/e/e4/Thermometer_Render.png"
+        "img": "assets/images/Thermometer_Render.png"
       }
     ],
     "strength": "Travels at a faster speed if its victim is far away.",
@@ -444,15 +444,15 @@
     "evidence": [
       {
         "name": "EMF Level 5",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/f/f2/EMFReader_Render.png"
+        "img": "assets/images/EMFReader_Render.png"
       },
       {
         "name": "Fingerprints",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/4/41/Fingerprints_3.png"
+        "img": "assets/images/Fingerprints_3.png"
       },
       {
         "name": "Ghost Writing",
-        "img": "https://static.wikia.nocookie.net/phasmophobia/images/2/2c/ClosedBook_Render.png"
+        "img": "assets/images/ClosedBook_Render.png"
       }
     ],
     "strength": "Has quieter footsteps during hunts.",
