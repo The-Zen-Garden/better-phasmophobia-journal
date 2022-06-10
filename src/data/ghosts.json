@@ -460,5 +460,71 @@
     "abilities": "Audible footsteps and electronics disruption have the same radius (9m).",
     "behavior": "When not hunting, a Myling will make paranormal sounds more often than other ghosts. These can be heard through a Parabolic Microphone.\r\n\r\nWhen hunting, a Myling's footstep sounds will only be audible to players within 9 meters, similar to the distance required for electronic interference. Other hunting sounds (laugh, sing, wheeze, etc.) will remain audible at the same distance as other ghosts.",
     "strategies": "Players can hear an idle ghost's paranormal sounds (voices, growls, etc.) only through a Parabolic Microphone. Frequent paranormal sounds may indicate that the ghost is a Myling.\r\n\r\nA hunting Myling's footstep sound distance is about the same as the distance within which electronics will become interfered with. During a hunt, a player can drop a flashlight on the floor. When the ghost is on the same floor, if footsteps are audible only when the flashlight starts flickering, the ghost is probably a Myling."
+  },
+  {
+    "name": "Deogen",
+    "evidence": [
+      {
+        "name": "Spirit Box",
+        "img": "assets/images/SpiritBox_Render.png"
+      },
+      {
+        "name": "Ghost Writing",
+        "img": "assets/images/ClosedBook_Render.png"
+      },
+      {
+        "name": "D.O.T.S. Projector",
+        "img": "assets/images/DOTS_projector_sprite.png"
+      }
+    ],
+    "strength": "Constantly senses the living. You can run but you can't hide.",
+    "weakness": "Require a lot of energy to form and will move very slowly.",
+    "abilities": "N/A",
+    "behavior": "Sometimes surrounded by an endless fog, Deogen have been eluding ghost hunters for years.\r\n\r\nThese ghosts have been reported to find even the most hidden prey, before stalking them into exhaustion.",
+    "strategies": "We are still gathering information about this ghost..."
+  },
+  {
+    "name": "Moroi",
+    "evidence": [
+      {
+        "name": "Spirit Box",
+        "img": "assets/images/SpiritBox_Render.png"
+      },
+      {
+        "name": "Ghost Writing",
+        "img": "assets/images/ClosedBook_Render.png"
+      },
+      {
+        "name": "Freezing Temperatures",
+        "img": "assets/images/Thermometer_Render.png"
+      }
+    ],
+    "strength": "The weaker the victims, the stronger the Moroi becomes.",
+    "weakness": "Suffers from hyperosmia, weakening them for longer periods",
+    "abilities": "N/A",
+    "behavior": "Moroi have risen from the grave to  drain energy from the living. They have been known to place curses on their victims, curable only by antidotes or moving very far away.",
+    "strategies": "We are still gathering information about this ghost..."
+  },
+  {
+    "name": "Thaye",
+    "evidence": [
+      {
+        "name": "Ghost Orb",
+        "img": "assets/images/GhostOrb_Sprite.png"
+      },
+      {
+        "name": "Ghost Writing",
+        "img": "assets/images/ClosedBook_Render.png"
+      },
+      {
+        "name": "D.O.T.S. Projector",
+        "img": "assets/images/DOTS_projector_sprite.png"
+      }
+    ],
+    "strength": "Upon entering the location, Thaye will become active, defensive and agile.",
+    "weakness": "Thaye will weaken over time, making them weaker, slower and less aggressive.",
+    "abilities": "N/A",
+    "behavior": "Thaye have been known to rapidly age over time, even in the afterlife. From what we've learned, they seem to deteriorate faster while within the presence of the living.",
+    "strategies": "We are still gathering information about this ghost..."
   }
 ]
