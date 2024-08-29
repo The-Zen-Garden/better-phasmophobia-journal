@@ -103,6 +103,7 @@ function GhostInfo() {
                       .join('')}
                     content={info.evidence[i].name}
                     placement="bottom"
+                    hideOnClick="false"
                     delay={[150, 0]}
                     onShow={() => Tippy.hideAll}
                   >

@@ -30,7 +30,7 @@ function EvidenceGroup() {
               .split(' ')
               .join('')}`}
           >
-            <Tippy content={`${evidence.name}`} placement="top">
+            <Tippy content={`${evidence.name}`} placement="top" hideOnClick="false">
               <button
                 className={clsx(
                   evidence.name.toLowerCase().split(' ').join(''),
