@@ -136,6 +136,12 @@ button {
         }
         & > span {
           pointer-events: none;
+          & > i {
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
           & > i.gg-info {
             color: $yellow;
             transition: var(--main-animation-default);
@@ -338,8 +344,20 @@ button {
       &:hover {
         background-color: lighten($red, 5);
       }
+      &:hover:active {
+        transition: var(--main-animation-active);
+        & > i > svg {
+          transition: var(--main-animation-active);
+          transform: scale(0.9);
+          opacity: 0.7;
+        }
+      }
       & > i {
         float: left;
+        font-size: 24px;
+        & > svg {
+          float: left;
+        }
       }
       &:before {
         content: '';

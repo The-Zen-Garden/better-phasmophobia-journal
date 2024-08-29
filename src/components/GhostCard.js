@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { CgCloseO, CgCheckO, CgInfo  } from "react-icons/cg";
 
 const GhostCard = ({ name, excluded, onInfo, onExclude, onInclude }) => {
   return (
@@ -14,20 +15,20 @@ const GhostCard = ({ name, excluded, onInfo, onExclude, onInclude }) => {
       <div className="actions">
         <button title="Ghost Info" onClick={onInfo}>
           <span>
-            <i className="gg-info"></i>
+            <i className="gg-info"><CgInfo className="cgInfo" /></i>
           </span>
         </button>
 
         {excluded !== true ? (
           <button title="Exclude Ghost" onClick={onExclude}>
             <span>
-              <i className="gg-close-o"></i>
+              <i className="gg-close-o"><CgCloseO className="CgCloseO" /></i>
             </span>
           </button>
         ) : (
           <button title="Include Ghost" onClick={onInclude}>
             <span>
-              <i className="gg-check-o"></i>
+              <i className="gg-check-o"><CgCheckO className="CgCheckO" /></i>
             </span>
           </button>
         )}

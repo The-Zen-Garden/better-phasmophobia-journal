@@ -4,6 +4,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { useJournal, useJournalDispatch } from '../context/journalContext';
 import { useSwipeable } from 'react-swipeable';
+import { CgArrowLeftO } from "react-icons/cg";
 
 function GhostInfo() {
   const { ghostList } = useJournal();
@@ -147,7 +148,7 @@ function GhostInfo() {
       </div>
       <span>
         <button id="back_button" onClick={hideInfo}>
-          <i className="gg-arrow-left-o"></i> Back to Ghost List
+          <i className="gg-arrow-left-o"><CgArrowLeftO /></i> Back to Ghost List
         </button>
       </span>
     </div>
